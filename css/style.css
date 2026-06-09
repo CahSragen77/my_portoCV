@@ -1,0 +1,490 @@
+/* ============================================
+   CSS Variables & Reset
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --navy: #1a2744;
+    --gold: #c9a84c;
+    --dark-gray: #2d3748;
+    --light-gray: #f5f5f5;
+    --white: #ffffff;
+    --border-color: #e2e8f0;
+    --privacy-bg: #fff3cd;
+    --privacy-border: #ffc107;
+    --privacy-text: #856404;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--light-gray);
+    color: var(--dark-gray);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    background-color: var(--white);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   PRIVACY: Data Sensitif - Sembunyi/Tampil
+   ============================================ */
+
+/* Style untuk data yang disembunyikan di web */
+.web-hidden {
+    color: #999;
+    font-style: italic;
+    font-size: 12px;
+    background-color: #f8f8f8;
+    padding: 3px 10px;
+    border-radius: 4px;
+    border: 1px dashed #ddd;
+    display: inline-block;
+}
+
+/* Style untuk data yang hanya muncul saat print */
+.print-only {
+    display: none;
+}
+
+/* Notifikasi privasi */
+.privacy-notice {
+    background-color: var(--privacy-bg);
+    border: 1px solid var(--privacy-border);
+    color: var(--privacy-text);
+    padding: 12px 15px;
+    border-radius: 6px;
+    margin-top: 15px;
+    font-size: 13px;
+}
+
+.privacy-notice p {
+    margin: 0;
+}
+
+/* Class untuk elemen yang hanya muncul di web */
+.web-only {
+    display: block;
+}
+
+/* Baris data sensitif */
+.sensitive-data .web-hidden {
+    display: inline-block;
+}
+
+.sensitive-data .print-only {
+    display: none;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+.header {
+    background-color: var(--navy);
+    color: var(--white);
+    display: grid;
+    grid-template-columns: 150px 1fr 200px;
+    align-items: center;
+    padding: 25px 30px;
+    gap: 20px;
+}
+
+.header-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-placeholder {
+    width: 130px;
+    height: 130px;
+    background-color: var(--gold);
+    border-radius: 50%;
+    border: 4px solid var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--navy);
+    overflow: hidden;
+}
+
+.photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.header-center {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.header-center h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.header-center .subtitle {
+    font-size: 14px;
+    color: var(--gold);
+    letter-spacing: 0.5px;
+    font-style: italic;
+}
+
+.header-right {
+    text-align: right;
+    font-size: 13px;
+    line-height: 1.8;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    padding-left: 20px;
+}
+
+.header-right .label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--gold);
+}
+
+#live-clock {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#live-date {
+    font-size: 13px;
+}
+
+/* ============================================
+   BODY CONTENT
+   ============================================ */
+.body-content {
+    padding: 30px;
+}
+
+.section {
+    margin-bottom: 30px;
+    page-break-inside: avoid;
+}
+
+.section:last-child {
+    margin-bottom: 0;
+}
+
+.section-title {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--navy);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+/* Deskripsi / About */
+.about-text {
+    text-align: justify;
+    color: var(--dark-gray);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* Tabel Data */
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.info-table td {
+    padding: 6px 10px;
+    vertical-align: top;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.info-table td:first-child {
+    font-weight: 600;
+    color: var(--navy);
+    width: 180px;
+}
+
+/* Pengalaman & Pendidikan */
+.experience-item {
+    margin-bottom: 20px;
+}
+
+.experience-item h3 {
+    font-size: 15px;
+    color: var(--navy);
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.experience-item .company {
+    font-weight: 600;
+    color: var(--dark-gray);
+}
+
+.experience-item .role {
+    color: var(--gold);
+    font-weight: 600;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.experience-item .definition {
+    background-color: #f8f9fa;
+    border-left: 3px solid var(--gold);
+    padding: 8px 12px;
+    margin: 8px 0;
+    font-size: 13px;
+    font-style: italic;
+    color: #555;
+}
+
+.experience-item ul {
+    padding-left: 20px;
+    font-size: 13px;
+    color: var(--dark-gray);
+}
+
+.experience-item ul li {
+    margin-bottom: 3px;
+}
+
+/* Keahlian */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.skill-card {
+    background-color: var(--light-gray);
+    border: 1px solid var(--border-color);
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    border-color: var(--gold);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.skill-card h4 {
+    color: var(--navy);
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.skill-card p {
+    font-size: 12px;
+    color: #666;
+}
+
+/* Galeri */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.gallery-item {
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    background: var(--light-gray);
+    transition: 0.3s;
+}
+
+.gallery-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.gallery-img {
+    width: 100%;
+    height: 150px;
+    background-color: #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+.gallery-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover .gallery-img img {
+    transform: scale(1.05);
+}
+
+.gallery-caption {
+    padding: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--navy);
+    background: white;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 15px;
+    background-color: var(--navy);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+}
+
+/* Print Button */
+.print-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--navy);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.print-btn:hover {
+    background-color: #0f1b30;
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   PRINT STYLES (Data Sensitif MUNCUL)
+   ============================================ */
+@media print {
+    body {
+        background: white;
+    }
+
+    .container {
+        box-shadow: none;
+        margin: 0;
+        max-width: 100%;
+    }
+
+    /* SEMBUNYIKAN elemen web-only saat print */
+    .print-btn,
+    .web-only,
+    .privacy-notice,
+    .footer {
+        display: none !important;
+    }
+
+    /* TAMPILKAN data sensitif saat print */
+    .sensitive-data .web-hidden {
+        display: none !important;
+    }
+
+    .sensitive-data .print-only {
+        display: inline !important;
+        color: var(--dark-gray) !important;
+        font-style: normal !important;
+        font-size: inherit !important;
+        background: none !important;
+        padding: 0 !important;
+        border: none !important;
+    }
+
+    /* Pastikan warna background header tetap muncul */
+    .header {
+        background-color: var(--navy) !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .section-title {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    /* Atur margin halaman */
+    @page {
+        margin: 1.5cm;
+    }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 768px) {
+    .header {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .header-left,
+    .header-center,
+    .header-right {
+        text-align: center;
+    }
+
+    .header-right {
+        border-left: none;
+        padding-left: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        padding-top: 10px;
+    }
+
+    .skills-grid,
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-grid,
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .body-content {
+        padding: 15px;
+    }
+
+    .header {
+        padding: 15px;
+    }
+
+    .header-center h1 {
+        font-size: 22px;
+    }
+}
