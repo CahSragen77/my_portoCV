@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CV Portofolio Profesional - Staff Administrasi & Data Entry dengan pengalaman lebih dari 5 tahun di industri ritel dan keahlian dalam pengembangan web.">
+    <meta name="keywords" content="CV, Portofolio, Administrasi, Data Entry, Butcher, Retail, Web Developer, Profesional">
+    <meta name="author" content="Nama Anda">
+    <title>CV Profesional | Portofolio — [Nama Anda]</title>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Tombol Print -->
+    <button class="print-btn" onclick="window.print()" title="Cetak CV / Simpan PDF">
+        🖨️ Print / Simpan PDF
+    </button>
+
+    <!-- ================= KONTAINER UTAMA ================= -->
+    <div class="container">
+
+        <!-- ================= HEADER ================= -->
+        <header class="header">
+            <!-- Kiri: Foto Profil -->
+            <div class="header-left">
+                <div class="photo-placeholder" id="photoContainer">
+                    <img id="profilePhoto" 
+                         src="assets/profile-photo.jpg" 
+                         alt="Foto Profil" 
+                         onerror="this.style.display='none'; this.parentElement.innerHTML='👤';">
+                </div>
+            </div>
+
+            <!-- Tengah: Nama -->
+            <div class="header-center">
+                <h1>Yudi Dwiranto</h1>
+                <p class="subtitle">Staff Administrasi & Data Entry | Web Developer</p>
+            </div>
+
+            <!-- Kanan: Tanggal & Waktu -->
+            <div class="header-right">
+                <p class="label">⏱ Waktu Saat Ini</p>
+                <p id="live-clock">--:--:--</p>
+                <p id="live-date">---------</p>
+            </div>
+        </header>
+
+        <!-- ================= BODY ================= -->
+        <main class="body-content">
+
+            <!-- 1. TENTANG SAYA -->
+            <section class="section" id="tentang-saya">
+                <h2 class="section-title">📋 Tentang Saya</h2>
+                <p class="about-text">
+                    Seorang profesional dengan pengalaman lebih dari 5 tahun di bidang administrasi dan pengelolaan data, 
+                    dengan rekam jejak yang solid di beberapa perusahaan ritel terkemuka. Memiliki keahlian dalam operasional 
+                    administrasi perkantoran, manajemen data, serta pemrosesan dan verifikasi dokumen bisnis. Selain itu, 
+                    memiliki pengalaman lintas-divisi yang memperkaya kompetensi, meliputi area <em>Meat & Butcher</em>, 
+                    <em>Fresh Produce</em>, dan <em>Daily Dairy</em>.
+                </p>
+                <p class="about-text" style="margin-top:10px;">
+                    Memiliki ketertarikan mendalam terhadap teknologi dan pemrograman, yang diwujudkan melalui pengembangan 
+                    landing page dan proyek web lainnya. Beberapa proyek yang telah dikerjakan antara lain: 
+                    <strong>[Sebutkan Proyek Web/Landing Page Anda]</strong>. Kombinasi antara ketelitian administratif 
+                    dan kemampuan teknis ini menjadi fondasi dalam memberikan solusi kerja yang efisien dan terstruktur.
+                </p>
+            </section>
+
+            <!-- 2. DATA PRIBADI (DENGAN DATA SENSITIF TERSEMBUNYI) -->
+            <section class="section" id="data-pribadi">
+                <h2 class="section-title">👤 Data Pribadi</h2>
+                <table class="info-table">
+                    <tr>
+                        <td>a. Nama Lengkap</td>
+                        <td>: [Yudi Dwiranto]</td>
+                    </tr>
+                    
+                    <!-- DATA SENSITIF: Alamat -->
+                    <tr class="sensitive-data">
+                        <td>b. Alamat</td>
+                        <td>
+                            <span class="web-hidden">🔒 Data ini hanya muncul saat dicetak/PDF</span>
+                            <span class="print-only">: [Perum Bumi Sariwani 1 Blok C]</span>
+                        </td>
+                    </tr>
+                    
+                    <!-- DATA SENSITIF: Email -->
+                    <tr class="sensitive-data">
+                        <td>c. Alamat E-mail</td>
+                        <td>
+                            <span class="web-hidden">🔒 Data ini hanya muncul saat dicetak/PDF</span>
+                            <span class="print-only">: [yudi.dwiranto@gmail.com]</span>
+                        </td>
+                    </tr>
+                    
+                    <!-- DATA NON-SENSITIF -->
+                    <tr>
+                        <td>d. Golongan Darah</td>
+                        <td>: [0]</td>
+                    </tr>
+                    
+                    <!-- DATA SENSITIF: No HP -->
+                    <tr class="sensitive-data">
+                        <td>e. No. HP</td>
+                        <td>
+                            <span class="web-hidden">🔒 Data ini hanya muncul saat dicetak/PDF</span>
+                            <span class="print-only">: [+62 813-8918-8903]</span>
+                        </td>
+                    </tr>
+                    
+                    <!-- DATA SENSITIF: Tanggal Lahir -->
+                    <tr class="sensitive-data">
+                        <td>f. Tanggal Lahir</td>
+                        <td>
+                            <span class="web-hidden">🔒 Data ini hanya muncul saat dicetak/PDF</span>
+                            <span class="print-only">: [17-06-1977]</span>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>g. Agama</td>
+                        <td>: [Islam]</td>
+                    </tr>
+                </table>
+                
+                <!-- Notifikasi Privasi -->
+                <div class="privacy-notice web-only">
+                    <p>ℹ️ <strong>Catatan Privasi:</strong> Data sensitif seperti alamat, email, nomor HP, dan tanggal lahir disembunyikan saat ditampilkan di web. Data lengkap akan muncul saat halaman dicetak atau disimpan sebagai PDF.</p>
+                </div>
+            </section>
+
+            <!-- 3. PENDIDIKAN -->
+            <section class="section" id="pendidikan">
+                <h2 class="section-title">🎓 Pendidikan</h2>
+                <table class="info-table">
+                    <tr><td>a. SD</td><td>: [Yayasan Pupuk Kaltim] — [Tahun Masuk] s/d [Tahun Lulus]</td></tr>
+                    <tr><td>b. SMP</td><td>: [Yayasan Pupuk Kaltim] — [Tahun Masuk] s/d [Tahun Lulus]</td></tr>
+                    <tr><td>c. SMU</td><td>: [Yayasan Pupuk Kaltim] — [Tahun Masuk] s/d [Tahun Lulus]</td></tr>
+                    <tr><td>d. Diploma</td><td>: [LP3I Bandung, Bisnis Administrasi] — [Tahun Masuk] s/d [Tahun Lulus]</td></tr>
+                </table>
+            </section>
+
+            <!-- 4. PENGALAMAN BEKERJA -->
+            <section class="section" id="pengalaman">
+                <h2 class="section-title">💼 Pengalaman Bekerja</h2>
+
+                <!-- A. PT Sanjaya Tama Lestari -->
+                <div class="experience-item">
+                    <h3>A. PT. Sanjaya Tama Lestari</h3>
+                    <p class="role">SPB (Sales Promotion Boy)</p>
+                    <div class="definition">
+                        <strong>Definisi:</strong> SPB adalah tenaga pemasaran yang bertugas di area penjualan untuk mempromosikan dan menawarkan produk langsung kepada pelanggan.
+                    </div>
+                    <ul>
+                        <li>Memajang produk sesuai standar visual perusahaan</li>
+                        <li>Menjelaskan fitur dan manfaat produk kepada pelanggan</li>
+                        <li>Mencatat stok dan memastikan ketersediaan barang</li>
+                        <li>Mencapai target penjualan harian dan mingguan</li>
+                        <li>Melaporkan hasil aktivitas promosi kepada supervisor</li>
+                    </ul>
+                </div>
+
+                <!-- B. PT Putra Serasi Pioneerindo / TOPS -->
+                <div class="experience-item">
+                    <h3>B. PT. Putra Serasi Pioneerindo / TOPS</h3>
+                    <p class="role">Butcher</p>
+                    <div class="definition">
+                        <strong>Definisi:</strong> Butcher adalah tenaga profesional yang bertanggung jawab menangani daging segar, mulai dari pemotongan, pemilahan, hingga pengemasan sesuai standar komersial.
+                    </div>
+                    <ul>
+                        <li>Memotong dan mengiris daging sesuai standar komersial</li>
+                        <li>Memisahkan daging berdasarkan grade dan jenis</li>
+                        <li>Menjaga kualitas, kesegaran, dan kebersihan area kerja</li>
+                        <li>Menimbang, memberi label harga, dan memajang daging di etalase</li>
+                        <li>Memastikan kepatuhan terhadap standar keamanan pangan (HACCP)</li>
+                    </ul>
+                </div>
+
+                <!-- C. PT Hero Supermarket Tbk -->
+                <div class="experience-item">
+                    <h3>C. PT. Hero Supermarket Tbk.</h3>
+                    
+                    <p class="role" style="margin-top:10px;">C.1 Staff Administrasi & Data Entry</p>
+                    <div class="definition">
+                        <strong>Definisi:</strong> Posisi yang bertanggung jawab dalam pengelolaan dokumen administratif dan input data secara akurat ke dalam sistem perusahaan.
+                    </div>
+                    <ul>
+                        <li>Memasukkan data penjualan, inventori, dan faktur ke sistem</li>
+                        <li>Memverifikasi keakuratan data sebelum diproses</li>
+                        <li>Mengarsip dokumen fisik dan digital secara sistematis</li>
+                        <li>Menyusun laporan harian dan mingguan untuk manajemen</li>
+                    </ul>
+
+                    <p class="role" style="margin-top:10px;">C.2 Staff Butcher</p>
+                    <div class="definition">
+                        <strong>Definisi:</strong> Tenaga ahli daging yang bertugas memastikan kualitas dan tampilan produk daging di gerai ritel.
+                    </div>
+                    <ul>
+                        <li>Melakukan pemotongan daging sesuai permintaan pelanggan</li>
+                        <li>Menjaga kebersihan dan sanitasi area kerja</li>
+                        <li>Melakukan quality control terhadap produk daging</li>
+                        <li>Menyusun display daging di showcase pendingin</li>
+                    </ul>
+
+                    <p class="role" style="margin-top:10px;">C.3 Staff Produce</p>
+                    <div class="definition">
+                        <strong>Definisi:</strong> Staff Produce bertanggung jawab atas penanganan dan perawatan produk buah dan sayur segar.
+                    </div>
+                    <ul>
+                        <li>Menyeleksi dan memilah produk segar sesuai grade</li>
+                        <li>Menyusun dan merotasi display sesuai FIFO (First In First Out)</li>
+                        <li>Memonitor suhu penyimpanan dan kesegaran produk</li>
+                        <li>Mengidentifikasi dan memisahkan produk yang tidak layak jual</li>
+                    </ul>
+
+                    <p class="role" style="margin-top:10px;">C.4 Staff Daily Dairy</p>
+                    <div class="definition">
+                        <strong>Definisi:</strong> Staff Daily Dairy adalah personel yang menangani produk susu dan turunannya (yogurt, keju, mentega) di area pendingin.
+                    </div>
+                    <ul>
+                        <li>Memastikan ketersediaan dan kelengkapan produk susu harian</li>
+                        <li>Memeriksa tanggal kedaluwarsa dan melakukan rotasi stok</li>
+                        <li>Menjaga kebersihan rak dan area pendingin</li>
+                        <li>Menerima dan memeriksa kiriman produk susu dari pemasok</li>
+                    </ul>
+                </div>
+
+                <!-- D. TOSAMA -->
+                <div class="experience-item">
+                    <h3>D. TOSAMA (Toko Sayur Mayur)</h3>
+                    
+                    <p class="role" style="margin-top:10px;">D.1 Kepala Toko</p>
+                    <div class="definition">
+                        <strong>Definisi:</strong> Kepala Toko adalah pimpinan operasional yang bertanggung jawab penuh atas kinerja dan pengelolaan satu unit toko secara keseluruhan.
+                    </div>
+                    <ul>
+                        <li>Memimpin dan mengawasi seluruh staff toko</li>
+                        <li>Menyusun jadwal kerja dan pembagian tugas</li>
+                        <li>Mengelola stok dan melakukan pemesanan barang</li>
+                        <li>Menganalisis pencapaian target penjualan</li>
+                        <li>Menangani keluhan pelanggan dan memastikan service excellence</li>
+                    </ul>
+
+                    <p class="role" style="margin-top:10px;">D.2 Staff Admin DC (Distribution Center)</p>
+                    <div class="definition">
+                        <strong>Definisi:</strong> Staff Admin DC adalah personel administrasi yang mendukung operasional pusat distribusi barang.
+                    </div>
+                    <ul>
+                        <li>Mencatat dan menginput data barang masuk dan keluar</li>
+                        <li>Memproses dokumen pengiriman dan penerimaan</li>
+                        <li>Mengkoordinasikan jadwal distribusi dengan toko tujuan</li>
+                        <li>Memonitor stok di gudang distribusi</li>
+                        <li>Melakukan rekonsiliasi data inventori secara berkala</li>
+                    </ul>
+                </div>
+
+                <!-- E. AmandaMart -->
+                <div class="experience-item">
+                    <h3>E. AmandaMart</h3>
+                    <p class="role">Kepala Toko Midi Market</p>
+                    <div class="definition">
+                        <strong>Definisi:</strong> Kepala Toko Midi Market adalah manajer operasional yang bertanggung jawab mengelola toko format menengah (midi) secara menyeluruh.
+                    </div>
+                    <ul>
+                        <li>Mengawasi operasional harian dan seluruh karyawan</li>
+                        <li>Menyusun strategi peningkatan penjualan</li>
+                        <li>Mengontrol biaya operasional dan cash flow toko</li>
+                        <li>Memastikan implementasi SOP perusahaan berjalan efektif</li>
+                        <li>Melaporkan performa toko kepada area manager</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 5. KEAHLIAN -->
+            <section class="section" id="keahlian">
+                <h2 class="section-title">⚡ Keahlian</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h4>📊 Microsoft Excel Mahir</h4>
+                        <p>Formula lanjutan, Pivot Table, VLOOKUP/HLOOKUP, visualisasi data, dan dashboard reporting untuk analisis data dan pelaporan.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h4>🌐 Web Development</h4>
+                        <p>Membangun landing page responsif menggunakan HTML, CSS, JavaScript, dan pengelolaan konten web untuk kebutuhan bisnis.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h4>🤖 Prompt Engineering AI</h4>
+                        <p>Merancang prompt terstruktur untuk mengoptimalkan output AI (ChatGPT, Claude) guna produktivitas dan otomasi tugas.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. GALERI KEGIATAN -->
+            <section class="section" id="galeri">
+                <h2 class="section-title">📸 Galeri Kegiatan</h2>
+                <div class="gallery-grid">
+                    <!-- Baris 1 -->
+                    <div class="gallery-item">
+                        <div class="gallery-img"><img src="assets/gallery/kegiatan-01.jpg" alt="Kegiatan 1"></div>
+                        <div class="gallery-caption">[Nama Kegiatan 1]</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-img"><img src="assets/gallery/kegiatan-02.jpg" alt="Kegiatan 2"></div>
+                        <div class="gallery-caption">[Nama Kegiatan 2]</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-img"><img src="assets/gallery/kegiatan-03.jpg" alt="Kegiatan 3"></div>
+                        <div class="gallery-caption">[Nama Kegiatan 3]</div>
+                    </div>
+                    <!-- Baris 2 -->
+                    <div class="gallery-item">
+                        <div class="gallery-img"><img src="assets/gallery/kegiatan-04.jpg" alt="Kegiatan 4"></div>
+                        <div class="gallery-caption">[Nama Kegiatan 4]</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-img"><img src="assets/gallery/kegiatan-05.jpg" alt="Kegiatan 5"></div>
+                        <div class="gallery-caption">[Nama Kegiatan 5]</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-img"><img src="assets/gallery/kegiatan-06.jpg" alt="Kegiatan 6"></div>
+                        <div class="gallery-caption">[Nama Kegiatan 6]</div>
+                    </div>
+                    <!-- Baris 3 -->
+                    <div class="gallery-item">
+                        <div class="gallery-img"><img src="assets/gallery/kegiatan-07.jpg" alt="Kegiatan 7"></div>
+                        <div class="gallery-caption">[Nama Kegiatan 7]</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-img"><img src="assets/gallery/kegiatan-08.jpg" alt="Kegiatan 8"></div>
+                        <div class="gallery-caption">[Nama Kegiatan 8]</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-img"><img src="assets/gallery/kegiatan-09.jpg" alt="Kegiatan 9"></div>
+                        <div class="gallery-caption">[Nama Kegiatan 9]</div>
+                    </div>
+                    <!-- Baris 4 -->
+                    <div class="gallery-item">
+                        <div class="gallery-img"><img src="assets/gallery/kegiatan-10.jpg" alt="Kegiatan 10"></div>
+                        <div class="gallery-caption">[Nama Kegiatan 10]</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-img"><img src="assets/gallery/kegiatan-11.jpg" alt="Kegiatan 11"></div>
+                        <div class="gallery-caption">[Nama Kegiatan 11]</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-img"><img src="assets/gallery/kegiatan-12.jpg" alt="Kegiatan 12"></div>
+                        <div class="gallery-caption">[Nama Kegiatan 12]</div>
+                    </div>
+                    <!-- Baris 5 -->
+                    <div class="gallery-item">
+                        <div class="gallery-img"><img src="assets/gallery/kegiatan-13.jpg" alt="Kegiatan 13"></div>
+                        <div class="gallery-caption">[Nama Kegiatan 13]</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-img"><img src="assets/gallery/kegiatan-14.jpg" alt="Kegiatan 14"></div>
+                        <div class="gallery-caption">[Nama Kegiatan 14]</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-img"><img src="assets/gallery/kegiatan-15.jpg" alt="Kegiatan 15"></div>
+                        <div class="gallery-caption">[Nama Kegiatan 15]</div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        
+        <!-- Footer dengan copyright -->
+        <footer class="footer web-only">
+            <p>&copy; 2026 [Yudi Dwiranto] — CV Portofolio Online</p>
+        </footer>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
