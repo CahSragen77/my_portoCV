@@ -511,3 +511,197 @@ body {
         font-size: 22px;
     }
 }
+
+
+/* ============================================
+   STYLE UNTUK LOGO PENDIDIKAN & PERUSAHAAN
+   ============================================ */
+
+/* Container Pendidikan dengan Logo */
+.education-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-color);
+    gap: 15px;
+    transition: background-color 0.3s;
+}
+
+.education-item:hover {
+    background-color: #fafafa;
+}
+
+.education-item:last-child {
+    border-bottom: none;
+}
+
+.edu-info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex: 1;
+    font-size: 14px;
+}
+
+.edu-label {
+    font-weight: 600;
+    color: var(--navy);
+    min-width: 60px;
+}
+
+.edu-detail {
+    color: var(--dark-gray);
+}
+
+/* Link Logo Pendidikan */
+.edu-logo-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid var(--border-color);
+    transition: all 0.3s ease;
+    background-color: var(--white);
+    text-decoration: none;
+}
+
+.edu-logo-link:hover {
+    border-color: var(--gold);
+    box-shadow: 0 4px 12px rgba(201, 168, 76, 0.3);
+    transform: scale(1.1);
+}
+
+.edu-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 4px;
+}
+
+/* ============================================
+   STYLE UNTUK LOGO PERUSAHAAN
+   ============================================ */
+
+/* Header Pengalaman dengan Logo */
+.experience-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 5px;
+}
+
+.experience-title {
+    flex: 1;
+}
+
+.experience-title h3 {
+    font-size: 15px;
+    color: var(--navy);
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+/* Link Logo Perusahaan */
+.company-logo-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 55px;
+    height: 55px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid var(--border-color);
+    transition: all 0.3s ease;
+    background-color: var(--white);
+    text-decoration: none;
+    margin-top: 2px;
+}
+
+.company-logo-link:hover {
+    border-color: var(--gold);
+    box-shadow: 0 6px 16px rgba(201, 168, 76, 0.35);
+    transform: translateY(-3px);
+}
+
+.company-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 5px;
+}
+
+/* Fallback jika logo gagal dimuat */
+.logo-fallback {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* ============================================
+   TOOLTIP CUSTOM (Opsional)
+   ============================================ */
+.edu-logo-link[title]:hover::after,
+.company-logo-link[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--navy);
+    color: var(--white);
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 11px;
+    white-space: nowrap;
+    z-index: 100;
+    pointer-events: none;
+}
+
+/* ============================================
+   RESPONSIVE: Logo di Mobile
+   ============================================ */
+@media (max-width: 768px) {
+    .education-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .edu-logo-link {
+        align-self: flex-end;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .experience-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .company-logo-link {
+        align-self: flex-end;
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* ============================================
+   PRINT: Sembunyikan logo saat print
+   (Opsional - hapus jika ingin logo tetap muncul)
+   ============================================ */
+@media print {
+    .edu-logo-link,
+    .company-logo-link {
+        display: none;
+    }
+}
