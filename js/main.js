@@ -6,10 +6,10 @@
 // Hanya akan dimasukkan ke HTML saat print/PDF
 
 const SENSITIVE_DATA = {
-    alamat: '[Alamat Lengkap Anda]',
-    email: '[email@domain.com]',
-    nohp: '[08xxxxxxxxxx]',
-    ttl: '[DD Bulan YYYY]'
+    alamat: '[Perum Bumi Sariwangi Blok C No. 09]',
+    email: '[yudidwiranto.srgn77@gmail.com]',
+    nohp: '[+62 813-8918-8903]',
+    ttl: '[17 06 1977]'
 };
 
 // ============================================
