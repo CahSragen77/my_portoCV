@@ -389,29 +389,52 @@ body {
 /* ============================================
    PRINT STYLES (Data Sensitif MUNCUL)
    ============================================ */
+/* ============================================
+   STYLE DATA SENSITIF
+   ============================================ */
+
+/* Placeholder yang muncul di web */
+.web-placeholder {
+    color: #999;
+    font-style: italic;
+    font-size: 12px;
+    background-color: #f8f8f8;
+    padding: 3px 10px;
+    border-radius: 4px;
+    border: 1px dashed #ddd;
+    display: inline-block;
+}
+
+/* Data asli yang hanya muncul saat print */
+.print-data {
+    display: none;
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
 @media print {
-    body {
-        background: white;
+    .web-placeholder {
+        display: none !important;
     }
-
-    .container {
-        box-shadow: none;
-        margin: 0;
-        max-width: 100%;
+    
+    .print-data {
+        display: inline !important;
+        color: var(--dark-gray) !important;
+        font-style: normal !important;
+        font-size: inherit !important;
+        background: none !important;
+        padding: 0 !important;
+        border: none !important;
     }
-
-    /* SEMBUNYIKAN elemen web-only saat print */
-    .print-btn,
-    .web-only,
+    
     .privacy-notice,
-    .footer {
+    .web-only {
         display: none !important;
     }
-
-    /* TAMPILKAN data sensitif saat print */
-    .sensitive-data .web-hidden {
-        display: none !important;
-    }
+    
+    /* ... sisa print styles yang lain ... */
+}
 
     .sensitive-data .print-only {
         display: inline !important;
