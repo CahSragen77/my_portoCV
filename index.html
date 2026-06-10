@@ -69,68 +69,68 @@
             </section>
 
             <!-- 2. DATA PRIBADI (DENGAN DATA SENSITIF TERSEMBUNYI) -->
-            <section class="section" id="data-pribadi">
-                <h2 class="section-title">👤 Data Pribadi</h2>
-                <table class="info-table">
-                    <tr>
-                        <td>a. Nama Lengkap</td>
-                        <td>: [Yudi Dwiranto]</td>
-                    </tr>
-                    
-                    <!-- DATA SENSITIF: Alamat -->
-                    <tr class="sensitive-data">
-                        <td>b. Alamat</td>
-                        <td>
-                            <span class="web-hidden">🔒 Data ini hanya muncul saat dicetak/PDF</span>
-                            <span class="print-only">: [Perum Bumi Sariwani 1 Blok C]</span>
-                        </td>
-                    </tr>
-                    
-                    <!-- DATA SENSITIF: Email -->
-                    <tr class="sensitive-data">
-                        <td>c. Alamat E-mail</td>
-                        <td>
-                            <span class="web-hidden">🔒 Data ini hanya muncul saat dicetak/PDF</span>
-                            <span class="print-only">: [yudi.dwiranto@gmail.com]</span>
-                        </td>
-                    </tr>
-                    
-                    <!-- DATA NON-SENSITIF -->
-                    <tr>
-                        <td>d. Golongan Darah</td>
-                        <td>: [0]</td>
-                    </tr>
-                    
-                    <!-- DATA SENSITIF: No HP -->
-                    <tr class="sensitive-data">
-                        <td>e. No. HP</td>
-                        <td>
-                            <span class="web-hidden">🔒 Data ini hanya muncul saat dicetak/PDF</span>
-                            <span class="print-only">: [+62 813-8918-8903]</span>
-                        </td>
-                    </tr>
-                    
-                    <!-- DATA SENSITIF: Tanggal Lahir -->
-                    <tr class="sensitive-data">
-                        <td>f. Tanggal Lahir</td>
-                        <td>
-                            <span class="web-hidden">🔒 Data ini hanya muncul saat dicetak/PDF</span>
-                            <span class="print-only">: [17-06-1977]</span>
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <td>g. Agama</td>
-                        <td>: [Islam]</td>
-                    </tr>
-                </table>
-                
-                <!-- Notifikasi Privasi -->
-                <div class="privacy-notice web-only">
-                    <p>ℹ️ <strong>Catatan Privasi:</strong> Data sensitif seperti alamat, email, nomor HP, dan tanggal lahir disembunyikan saat ditampilkan di web. Data lengkap akan muncul saat halaman dicetak atau disimpan sebagai PDF.</p>
-                </div>
-            </section>
-
+            <!-- 2. DATA PRIBADI (DATA SENSITIF DIHAPUS DARI HTML) -->
+<section class="section" id="data-pribadi">
+    <h2 class="section-title">👤 Data Pribadi</h2>
+    <table class="info-table" id="personalDataTable">
+        <tr>
+            <td>a. Nama Lengkap</td>
+            <td>: [Nama Lengkap Anda]</td>
+        </tr>
+        
+        <!-- DATA SENSITIF: Alamat - HANYA PLACEHOLDER -->
+        <tr class="sensitive-row" data-field="alamat">
+            <td>b. Alamat</td>
+            <td>
+                <span class="web-placeholder">🔒 Data ini hanya muncul saat dicetak/PDF</span>
+                <span class="print-data" style="display:none;"></span>
+            </td>
+        </tr>
+        
+        <!-- DATA SENSITIF: Email -->
+        <tr class="sensitive-row" data-field="email">
+            <td>c. Alamat E-mail</td>
+            <td>
+                <span class="web-placeholder">🔒 Data ini hanya muncul saat dicetak/PDF</span>
+                <span class="print-data" style="display:none;"></span>
+            </td>
+        </tr>
+        
+        <!-- DATA NON-SENSITIF -->
+        <tr>
+            <td>d. Golongan Darah</td>
+            <td>: [Golongan Darah]</td>
+        </tr>
+        
+        <!-- DATA SENSITIF: No HP -->
+        <tr class="sensitive-row" data-field="nohp">
+            <td>e. No. HP</td>
+            <td>
+                <span class="web-placeholder">🔒 Data ini hanya muncul saat dicetak/PDF</span>
+                <span class="print-data" style="display:none;"></span>
+            </td>
+        </tr>
+        
+        <!-- DATA SENSITIF: Tanggal Lahir -->
+        <tr class="sensitive-row" data-field="ttl">
+            <td>f. Tanggal Lahir</td>
+            <td>
+                <span class="web-placeholder">🔒 Data ini hanya muncul saat dicetak/PDF</span>
+                <span class="print-data" style="display:none;"></span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>g. Agama</td>
+            <td>: [Agama]</td>
+        </tr>
+    </table>
+    
+    <!-- Notifikasi Privasi -->
+    <div class="privacy-notice web-only">
+        <p>ℹ️ <strong>Catatan Privasi:</strong> Data sensitif disembunyikan untuk keamanan. Data lengkap hanya muncul saat mencetak/PDF.</p>
+    </div>
+</section>
             <!-- 3. PENDIDIKAN -->
             <section class="section" id="pendidikan">
                 <h2 class="section-title">🎓 Pendidikan</h2>
