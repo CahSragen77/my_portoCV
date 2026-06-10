@@ -1,182 +1,142 @@
-/**
- * ============================================
- * CV Portofolio - Main JavaScript
- * ============================================
- * Fitur:
- * - Real-time clock
- * - Foto profil dinamis
- * - Konfirmasi privasi sebelum print
- * - Interaktivitas halaman
- * ============================================
- */
+// ============================================
+// DATA SENSITIF (HANYA DI JAVASCRIPT)
+// ============================================
+// ⚠️ PENTING: Ganti dengan data asli lo
+// Data ini TIDAK akan muncul di View Page Source
+// Hanya akan dimasukkan ke HTML saat print/PDF
+
+const SENSITIVE_DATA = {
+    alamat: '[Alamat Lengkap Anda]',
+    email: '[email@domain.com]',
+    nohp: '[08xxxxxxxxxx]',
+    ttl: '[DD Bulan YYYY]'
+};
 
 // ============================================
-// REAL-TIME CLOCK
-// ============================================
-
-/**
- * Fungsi untuk update jam dan tanggal secara real-time
- */
-function updateClock() {
-    const now = new Date();
-    
-    // Format jam: HH:MM:SS
-    const hours = String(now.getHours()).padStart(2, '0');
-    const minutes = String(now.getMinutes()).padStart(2, '0');
-    const seconds = String(now.getSeconds()).padStart(2, '0');
-    
-    const clockElement = document.getElementById('live-clock');
-    if (clockElement) {
-        clockElement.textContent = `${hours}:${minutes}:${seconds}`;
-    }
-    
-    // Format tanggal: "Hari, DD Bulan YYYY"
-    const namaHari = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
-    const namaBulan = [
-        'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni',
-        'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'
-    ];
-    
-    const dateElement = document.getElementById('live-date');
-    if (dateElement) {
-        dateElement.textContent = 
-            `${namaHari[now.getDay()]}, ${String(now.getDate()).padStart(2, '0')} ${namaBulan[now.getMonth()]} ${now.getFullYear()}`;
-    }
-}
-
-// Jalankan setiap detik
-setInterval(updateClock, 1000);
-
-// Panggil saat halaman dimuat
-document.addEventListener('DOMContentLoaded', function() {
-    updateClock();
-    
-    // Tambahkan event listener untuk tombol print dengan konfirmasi
-    setupPrintButton();
-});
-
-// ============================================
-// FOTO PROFIL DINAMIS
+// FUNGSI: Load Data Sensitif saat Print
 // ============================================
 
 /**
- * Fungsi untuk mengganti foto profil secara dinamis
- * @param {string} imageUrl - URL gambar foto profil
+ * Memasukkan data sensitif ke HTML HANYA saat print
+ * Data akan hilang lagi setelah print selesai
  */
-function setProfilePhoto(imageUrl) {
-    const photo = document.getElementById('profilePhoto');
-    const placeholder = document.getElementById('photoContainer');
+function loadSensitiveDataForPrint() {
+    const rows = document.querySelectorAll('.sensitive-row');
     
-    if (photo && imageUrl) {
-        photo.src = imageUrl;
-        photo.style.display = 'block';
-        photo.onerror = function() {
-            this.style.display = 'none';
-            if (placeholder) {
-                placeholder.innerHTML = '👤';
-            }
-        };
-    }
-}
-
-// Uncomment dan ganti dengan path foto Anda:
-// setProfilePhoto('assets/profile-photo.jpg');
-
-// ============================================
-// KONFIRMASI PRIVASI SEBELUM PRINT
-// ============================================
-
-/**
- * Setup tombol print dengan konfirmasi privasi
- */
-function setupPrintButton() {
-    const printBtn = document.querySelector('.print-btn');
-    
-    if (printBtn) {
-        // Override onclick default
-        printBtn.onclick = function(e) {
-            // Tampilkan konfirmasi
-            const userConfirmed = confirm(
-                '🖨️ CETAK CV / SIMPAN PDF\n\n' +
-                '⚠️ PERHATIAN PRIVASI:\n' +
-                'Data sensitif (Alamat, Email, No. HP, Tanggal Lahir)\n' +
-                'akan MUNCUL di hasil cetakan/PDF.\n\n' +
-                'Pastikan Anda menyimpan file dengan aman.\n\n' +
-                'Lanjutkan mencetak?'
-            );
-            
-            if (userConfirmed) {
-                window.print();
-            }
-        };
-    }
-}
-
-// ============================================
-// DETEKSI SEBELUM PRINT (Browser Native)
-// ============================================
-
-window.addEventListener('beforeprint', function() {
-    console.log('🔓 Data sensitif akan ditampilkan untuk keperluan cetak...');
-    // Animasi atau persiapan tambahan bisa ditambahkan di sini
-});
-
-window.addEventListener('afterprint', function() {
-    console.log('🔒 Kembali ke mode web - data sensitif disembunyikan');
-});
-
-// ============================================
-// FUNGSI TAMBAHAN
-// ============================================
-
-/**
- * Toggle tampilan data sensitif (untuk preview)
- * @param {boolean} show - true untuk tampilkan, false untuk sembunyikan
- */
-function toggleSensitiveData(show) {
-    const sensitiveRows = document.querySelectorAll('.sensitive-data');
-    
-    sensitiveRows.forEach(row => {
-        const webHidden = row.querySelector('.web-hidden');
-        const printOnly = row.querySelector('.print-only');
+    rows.forEach(row => {
+        const field = row.getAttribute('data-field');
+        const printDataSpan = row.querySelector('.print-data');
+        const webPlaceholder = row.querySelector('.web-placeholder');
         
-        if (show) {
-            // Tampilkan data sensitif
-            if (webHidden) webHidden.style.display = 'none';
-            if (printOnly) {
-                printOnly.style.display = 'inline';
-                printOnly.style.color = 'var(--dark-gray)';
-                printOnly.style.fontStyle = 'normal';
-                printOnly.style.background = 'none';
-                printOnly.style.padding = '0';
-                printOnly.style.border = 'none';
-            }
-        } else {
-            // Sembunyikan data sensitif
-            if (webHidden) webHidden.style.display = 'inline-block';
-            if (printOnly) printOnly.style.display = 'none';
+        if (field && SENSITIVE_DATA[field] && printDataSpan) {
+            // Masukkan data asli ke span print
+            printDataSpan.textContent = ': ' + SENSITIVE_DATA[field];
         }
     });
 }
 
 /**
- * Scroll ke section tertentu
- * @param {string} sectionId - ID section tujuan
+ * Menghapus data sensitif dari HTML setelah print
  */
-function scrollToSection(sectionId) {
-    const section = document.getElementById(sectionId);
-    if (section) {
-        section.scrollIntoView({ 
-            behavior: 'smooth', 
-            block: 'start' 
-        });
+function clearSensitiveData() {
+    const printDataSpans = document.querySelectorAll('.print-data');
+    printDataSpans.forEach(span => {
+        span.textContent = '';
+    });
+}
+
+// ============================================
+// EVENT LISTENER PRINT
+// ============================================
+
+// Sebelum print: Load data sensitif
+window.addEventListener('beforeprint', function() {
+    console.log('🔓 Memuat data sensitif untuk keperluan cetak...');
+    loadSensitiveDataForPrint();
+});
+
+// Setelah print: Hapus data sensitif
+window.addEventListener('afterprint', function() {
+    console.log('🔒 Menghapus data sensitif dari HTML...');
+    // Delay sedikit untuk memastikan print selesai
+    setTimeout(clearSensitiveData, 1000);
+});
+
+// ============================================
+// TOMBOL PRINT DENGAN KONFIRMASI
+// ============================================
+
+function setupPrintButton() {
+    const printBtn = document.querySelector('.print-btn');
+    
+    if (printBtn) {
+        printBtn.onclick = function(e) {
+            const userConfirmed = confirm(
+                '🖨️ CETAK CV / SIMPAN PDF\n\n' +
+                '⚠️ PERHATIAN PRIVASI:\n' +
+                'Data sensitif akan MUNCUL di hasil cetakan/PDF.\n' +
+                'Pastikan Anda menyimpan file dengan aman.\n\n' +
+                'Lanjutkan mencetak?'
+            );
+            
+            if (userConfirmed) {
+                // Load data dulu sebelum print
+                loadSensitiveDataForPrint();
+                
+                // Print setelah data diload
+                setTimeout(() => {
+                    window.print();
+                }, 500);
+            }
+        };
     }
 }
 
 // ============================================
-// LOG APLIKASI
+// KEAMANAN TAMBAHAN: Disable View Source Shortcut
+// (Opsional - hanya mengurangi, bukan mencegah 100%)
 // ============================================
-console.log('✅ CV Portofolio siap!');
-console.log('🔒 Mode Privasi: Data sensitif disembunyikan di web');
-console.log('🖨️ Data sensitif akan muncul saat dicetak/PDF');
-console.log('📅 Jam digital berjalan...');
+
+document.addEventListener('keydown', function(e) {
+    // Blokir CTRL+U (View Source)
+    if (e.ctrlKey && e.key === 'u') {
+        e.preventDefault();
+        console.log('⚠️ View Source dinonaktifkan untuk keamanan data.');
+        return false;
+    }
+    
+    // Blokir CTRL+SHIFT+I (Inspect Element)
+    if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+        e.preventDefault();
+        console.log('⚠️ Inspect Element dinonaktifkan untuk keamanan data.');
+        return false;
+    }
+    
+    // Blokir F12 (Developer Tools)
+    if (e.key === 'F12') {
+        e.preventDefault();
+        console.log('⚠️ Developer Tools dinonaktifkan untuk keamanan data.');
+        return false;
+    }
+});
+
+// Blokir klik kanan (opsional)
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+    console.log('⚠️ Klik kanan dinonaktifkan untuk keamanan data.');
+    return false;
+});
+
+// ============================================
+// INITIALIZATION
+// ============================================
+document.addEventListener('DOMContentLoaded', function() {
+    updateClock();
+    setupPrintButton();
+    validateLogoLinks();
+    
+    console.log('✅ CV Portofolio siap!');
+    console.log('🔒 Mode Aman: Data sensitif disimpan di JavaScript');
+    console.log('🛡️ View Source & Inspect Element dinonaktifkan');
+    console.log('🖨️ Data hanya muncul saat print/PDF');
+});
