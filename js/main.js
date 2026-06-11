@@ -1,4 +1,67 @@
 // ============================================
+// REAL-TIME CLOCK (VERSI STABIL)
+// ============================================
+
+/**
+ * Update jam dan tanggal setiap detik
+ * Dipanggil saat halaman dimuat dan diulang setiap 1 detik
+ */
+function updateClock() {
+    try {
+        const now = new Date();
+        
+        // Format jam: HH:MM:SS
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const seconds = String(now.getSeconds()).padStart(2, '0');
+        
+        const clockElement = document.getElementById('live-clock');
+        if (clockElement) {
+            clockElement.textContent = `${hours}:${minutes}:${seconds}`;
+        } else {
+            console.warn('⚠️ Elemen #live-clock tidak ditemukan!');
+        }
+        
+        // Array nama hari dan bulan (Bahasa Indonesia)
+        const namaHari = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+        const namaBulan = [
+            'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni',
+            'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'
+        ];
+        
+        // Format tanggal
+        const day = String(now.getDate()).padStart(2, '0');
+        const month = namaBulan[now.getMonth()];
+        const year = now.getFullYear();
+        const dayName = namaHari[now.getDay()];
+        
+        const dateElement = document.getElementById('live-date');
+        if (dateElement) {
+            dateElement.textContent = `${dayName}, ${day} ${month} ${year}`;
+        } else {
+            console.warn('⚠️ Elemen #live-date tidak ditemukan!');
+        }
+        
+    } catch (error) {
+        console.error('❌ Error pada updateClock():', error);
+    }
+}
+
+// ============================================
+// INISIALISASI JAM
+// ============================================
+
+// Jalankan segera saat script dimuat
+updateClock();
+
+// Jalankan setiap 1 detik (1000 milidetik)
+const clockInterval = setInterval(updateClock, 1000);
+
+// Pastikan interval berjalan
+console.log('⏱ Jam digital dimulai...');
+console.log('🔄 Interval ID:', clockInterval);
+
+// ============================================
 // DATA SENSITIF (HANYA DI JAVASCRIPT)
 // ============================================
 // ⚠️ PENTING: Ganti dengan data asli lo
