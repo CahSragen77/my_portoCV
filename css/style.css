@@ -1001,13 +1001,38 @@ body {
 }
 
 .hero-grid {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+    display: flex !important; /* Kita ubah dari grid menjadi flex agar lebih stabil mendatar */
+    flex-direction: row !important;
+    gap: 40px !important;
+    align-items: center !important;
+    box-sizing: border-box !important;
 }
+
+/* Memastikan teks kiri mengambil porsi 55% lebar layar */
+.hero-content {
+    flex: 1.2 !important;
+    text-align: left !important;
+}
+
+/* Memastikan visual Excel kanan mengambil porsi 45% lebar layar */
+.hero-visual {
+    flex: 0.8 !important;
+    width: 100% !important;
+    display: block !important;
+}
+
+/* Responsif otomatis jika dibuka lewat layar HP */
+@media (max-width: 768px) {
+    .hero-grid { 
+        flex-direction: column !important; /* Di HP otomatis menumpuk atas-bawah */
+        text-align: center !important; 
+    }
+    .hero-content { text-align: center !important; }
+    .hero-visual { display: none !important; } /* Di HP kita sembunyikan kotak excelnya agar hemat layar */
+}
+
 
 /* Sisi Kiri */
 .badge-dev {
