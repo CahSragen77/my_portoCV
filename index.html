@@ -13,15 +13,69 @@
 </head>
 <body>
 
+   <body>
+
     <!-- Tombol Print -->
     <button class="print-btn" onclick="window.print()" title="Cetak CV / Simpan PDF">
         🖨️ Print / Simpan PDF
     </button>
 
-    <!-- ================= KONTAINER UTAMA ================= -->
+    <!-- ================= 1. SAMPUL VISUAL PORTFOLIO (HERO SECTION) ================= -->
+    <!-- Ditaruh di luar kontainer agar background hitam-hijau bisa penuh dari ujung ke ujung layar -->
+    <div class="hero-cover">
+        <div class="hero-grid">
+            
+            <!-- Sisi Kiri: Narasi & Identitas -->
+            <div class="hero-content">
+                <div class="badge-dev">&lt;web-developer&gt;</div>
+                <h1 class="hero-title">Yudi Dwiranto</h1>
+                <p class="hero-subtitle">Membentuk Data Mentah Menjadi Informasi Hidup</p>
+                
+                <!-- KOREKSI: Tag pembuka div di bawah ini yang tadi hilang sudah dikembalikan -->
+                
+                    <span class="tag-excel">📊 Excel Data Specialist</span>
+                    <span class="tag-admin">📋 Admin & Data Entry Expert</span>
+                </div>
+                
+                <p class="hero-desc">
+                    Pengalaman 5+ tahun dalam mengelola operasional administrasi secara presisi, 
+                    dipadukan dengan kemampuan mengolah rumus data Excel tingkat lanjut, 
+                    serta keahlian membangun antarmuka web modern yang responsif.
+                </p>
+                
+                <div class="hero-buttons">
+                    <a href="#kontak" class="btn-primary">Hubungi Saya</a>
+                    <button onclick="window.print()" class="btn-secondary">🖨️ Simpan PDF</button>
+                </div>
+            </div>
+
+            <!-- Sisi Kanan: Visualisasi Grafik & Kode (Simbol Excel & Programming) -->
+            <div class="hero-visual">
+                <div class="window-box">
+                    <div class="window-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="window-title">data_analysis.xlsx</span>
+                    </div>
+                    <div class="window-body">
+                        <pre class="code-preview"><code><span class="c-green">=VLOOKUP</span>(<span class="c-blue">"Staff_Admin"</span>, A2:D100, 3, <span class="c-orange">FALSE</span>)</code></pre>
+                        <div class="excel-chart-sim">
+                            <div class="bar animate-1"></div>
+                            <div class="bar animate-2"></div>
+                            <div class="bar animate-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- ================= 2. KONTAINER UTAMA (BAGIAN PUTIH BAWAH) ================= -->
     <div class="container">
 
-        <!-- ================= HEADER ================= -->
+        <!-- ================= HEADER LAMA (Jika ingin dipertahankan, atau bisa dihapus jika double) ================= -->
         <header class="header">
             <!-- Kiri: Foto Profil -->
             <div class="header-left">
@@ -47,56 +101,9 @@
             </div>
         </header>
 
-        <!-- ================= BODY ================= -->
+        <!-- ================= BODY CONTENT ================= -->
         <main class="body-content">
-
-            <!-- SAMPUL VISUAL PORTFOLIO (HERO SECTION) -->
-<div class="hero-cover">
-    <div class="hero-grid">
-        <!-- Sisi Kiri: Narasi & Identitas -->
-        <div class="hero-content">
-            <div class="badge-dev">&lt;web-developer&gt;</div>
-            <h1 class="hero-title">Yudi Dwiranto</h1>
-            <p class="hero-subtitle">Membentuk Data Mentah Menjadi Informasi Hidup</p>
-            
-            
-                <span class="tag-excel">📊 Excel Data Specialist</span>
-                <span class="tag-admin">📋 Admin & Data Entry Expert</span>
-            </div>
-            
-            <p class="hero-desc">
-                Pengalaman 5+ tahun dalam mengelola operasional administrasi secara presisi, 
-                dipadukan dengan kemampuan mengolah rumus data Excel tingkat lanjut, 
-                serta keahlian membangun antarmuka web modern yang responsif.
-            </p>
-            
-            <div class="hero-buttons">
-                <a href="#kontak" class="btn-primary">Hubungi Saya</a>
-                <button onclick="window.print()" class="btn-secondary">🖨️ Simpan PDF</button>
-            </div>
-        </div>
-
-        <!-- Sisi Kanan: Visualisasi Grafik & Kode (Simbol Excel & Programming) -->
-        <div class="hero-visual">
-            <div class="window-box">
-                <div class="window-header">
-                    <span class="dot red"></span>
-                    <span class="dot yellow"></span>
-                    <span class="dot green"></span>
-                    <span class="window-title">data_analysis.xlsx</span>
-                </div>
-                <div class="window-body">
-                    <pre class="code-preview"><code><span class="c-green">=VLOOKUP</span>(<span class="c-blue">"Staff_Admin"</span>, A2:D100, 3, <span class="c-orange">FALSE</span>)</code></pre>
-                    <div class="excel-chart-sim">
-                        <div class="bar animate-1"></div>
-                        <div class="bar animate-2"></div>
-                        <div class="bar animate-3"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+            <!-- (Sisa kode isi section 'Tentang Saya', 'Data Pribadi', dll langsung lanjut di sini) -->
 
 
             <!-- 1. TENTANG SAYA -->
