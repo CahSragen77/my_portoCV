@@ -990,3 +990,183 @@ body {
         display: none !important;
     }
 }
+
+/* --- STYLING SAMPUL HERO --- */
+.hero-cover {
+    background: linear-gradient(135deg, #111827 0%, #064e3b 100%); /* Perpaduan warna hitam tech & hijau excel */
+    color: #ffffff;
+    padding: 80px 24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-bottom: 5px solid #107c41;
+}
+
+.hero-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+/* Sisi Kiri */
+.badge-dev {
+    color: #34d399;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.hero-title {
+    font-size: 3rem;
+    margin: 0 0 10px 0;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.hero-subtitle {
+    font-size: 1.4rem;
+    color: #a7f3d0;
+    margin: 0 0 20px 0;
+    font-weight: 500;
+}
+
+.identity-tags {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.identity-tags span {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.tag-excel { background-color: #107c41; color: white; }
+.tag-admin { background-color: #1f2937; color: #e5e7eb; border: 1px solid #4b5563; }
+
+.hero-desc {
+    color: #d1d5db;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-size: 1.05rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-primary {
+    background-color: #107c41;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.btn-primary:hover { background-color: #0b512a; }
+
+.btn-secondary {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.btn-secondary:hover { background-color: white; color: #111827; }
+
+/* Sisi Kanan (Visualisasi Data & Code) */
+.window-box {
+    background-color: #1e293b;
+    border-radius: 8px;
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.5);
+    border: 1px solid #334155;
+    overflow: hidden;
+}
+
+.window-header {
+    background-color: #0f172a;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+.red { background-color: #ef4444; }
+.yellow { background-color: #f59e0b; }
+.green { background-color: #10b981; }
+
+.window-title {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    font-family: monospace;
+    margin-left: auto;
+}
+
+.window-body {
+    padding: 24px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.code-preview {
+    background-color: #0f172a;
+    padding: 15px;
+    border-radius: 6px;
+    color: #f8fafc;
+    margin: 0 0 20px 0;
+    font-size: 0.95rem;
+    border-left: 4px solid #107c41;
+}
+
+.c-green { color: #34d399; font-weight: bold; }
+.c-blue { color: #60a5fa; }
+.c-orange { color: #fb923c; }
+
+/* Simulasi Grafik Excel Bergerak */
+.excel-chart-sim {
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+    height: 100px;
+    padding-left: 10px;
+}
+
+.bar {
+    width: 35px;
+    background: linear-gradient(to top, #0b512a, #34d399);
+    border-radius: 4px 4px 0 0;
+    transition: 1s ease-in-out;
+}
+
+.animate-1 { height: 40px; animation: pulse 2s infinite alternate; }
+.animate-2 { height: 85px; animation: pulse 2.5s infinite alternate; }
+.animate-3 { height: 60px; animation: pulse 1.8s infinite alternate; }
+
+@keyframes pulse {
+    0% { transform: scaleY(1); }
+    100% { transform: scaleY(1.1); filter: brightness(1.2); }
+}
+
+/* Responsif untuk HP */
+@media (max-width: 768px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 30px; text-align: center; }
+    .identity-tags { justify-content: center; }
+    .hero-buttons { justify-content: center; }
+    .hero-title { font-size: 2.2rem; }
+}
+
+/* Sembunyikan Sampul ini saat Dicetak ke PDF agar hemat kertas HRD */
+@media print {
+    .hero-cover { display: none !important; }
+}
+
