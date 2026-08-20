@@ -3,686 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CV Portofolio Profesional - Staff Administrasi & Data Entry dengan pengalaman lebih dari 5 tahun di industri ritel dan keahlian dalam pengembangan web.">
-    <meta name="keywords" content="CV, Portofolio, Administrasi, Data Entry, Butcher, Retail, Web Developer, Profesional">
-    <meta name="author" content="Yudi Dwiranto">
-    <title>CV Profesional | Portofolio — Yudi Dwiranto</title>
-    
-    <!-- External CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <title>Yudi Dwiranto — Professional CV & Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-   <body>
-
-    <!-- Tombol Print -->
-    <button class="print-btn" onclick="window.print()" title="Cetak CV / Simpan PDF">
-        🖨️ Print / Simpan PDF
-    </button>
-
-    <!-- ================= 1. SAMPUL VISUAL PORTFOLIO (HERO SECTION) ================= -->
-    <!-- Ditaruh di luar kontainer agar background hitam-hijau bisa penuh dari ujung ke ujung layar -->
-    <div class="hero-cover">
-        <div class="hero-grid">
-            
-            <!-- Sisi Kiri: Narasi & Identitas -->
-            <div class="hero-content">
-                <div class="badge-dev">&lt;web-developer&gt;</div>
-                <h1 class="hero-title">Yudi Dwiranto</h1>
-                <p class="hero-subtitle">Membentuk Data Mentah Menjadi Informasi Hidup</p>
-                
-                <!-- KOREKSI: Tag pembuka div di bawah ini yang tadi hilang sudah dikembalikan -->
-                
-                    <span class="tag-excel">📊 Excel Data Specialist</span>
-                    <span class="tag-admin">📋 Admin & Data Entry Expert</span>
+    <!-- HERO / HEADER SECTION -->
+    <header class="hero-header">
+        <div class="container hero-container">
+            <div class="profile-card">
+                <div class="avatar-wrapper">
+                    <img src="assets/profile-photo.jpg" alt="Yudi Dwiranto" class="profile-img" onerror="this.src='https://via.placeholder.com/150'">
+                    <span class="status-badge"></span>
                 </div>
-                
-                <p class="hero-desc">
-                    Pengalaman 5+ tahun dalam mengelola operasional administrasi secara presisi, 
-                    dipadukan dengan kemampuan mengolah rumus data Excel tingkat lanjut, 
-                    serta keahlian membangun antarmuka web modern yang responsif.
-                </p>
-                
-                <div class="hero-buttons">
-                    <a href="#kontak" class="btn-primary">Hubungi Saya</a>
-                    <button onclick="window.print()" class="btn-secondary">🖨️ Simpan PDF</button>
-                </div>
-            </div>
-
-            <!-- Sisi Kanan: Visualisasi Grafik & Kode (Simbol Excel & Programming) -->
-            <div class="hero-visual">
-                <div class="window-box">
-                    <div class="window-header">
-                        <span class="dot red"></span>
-                        <span class="dot yellow"></span>
-                        <span class="dot green"></span>
-                        <span class="window-title">data_analysis.xlsx</span>
-                    </div>
-                    <div class="window-body">
-                        <pre class="code-preview"><code><span class="c-green">=VLOOKUP</span>(<span class="c-blue">"Staff_Admin"</span>, A2:D100, 3, <span class="c-orange">FALSE</span>)</code></pre>
-                        <div class="excel-chart-sim">
-                            <div class="bar animate-1"></div>
-                            <div class="bar animate-2"></div>
-                            <div class="bar animate-3"></div>
-                        </div>
+                <div class="profile-info">
+                    <span class="role-tag">Staff Administrasi & Data Entry | Web Developer</span>
+                    <h1>Yudi Dwiranto</h1>
+                    <p class="tagline">Pengalaman 5+ Tahun Mengelola Operasional Ritel, Formulasi Excel Lanjutan & Pengembangan Web Modern.</p>
+                    <div class="skills-badges">
+                        <span>📊 Excel Specialist</span>
+                        <span>📋 Admin & Data Entry</span>
+                        <span>🌐 Web Developer</span>
                     </div>
                 </div>
             </div>
-            
+            <div class="widget-card">
+                <div class="widget-header">⏱ WAKTU SAAT INI</div>
+                <div id="live-time" class="widget-time">00:00:00</div>
+                <div id="live-date" class="widget-date">Loading...</div>
+            </div>
         </div>
-    </div>
+    </header>
 
-    <!-- ================= 2. KONTAINER UTAMA (BAGIAN PUTIH BAWAH) ================= -->
-    <div class="container">
+    <!-- MAIN CONTENT -->
+    <main class="container main-content">
 
-        <!-- ================= HEADER LAMA (Jika ingin dipertahankan, atau bisa dihapus jika double) ================= -->
-        <header class="header">
-            <!-- Kiri: Foto Profil -->
-            <div class="header-left">
-                <div class="photo-placeholder" id="photoContainer">
-                    <img id="profilePhoto" 
-                         src="assets/profile-photo.jpg" 
-                         alt="Foto Profil" 
-                         onerror="this.style.display='none'; this.parentElement.innerHTML='👤';">
+        <!-- TENTANG SAYA -->
+        <section class="card-section">
+            <div class="section-title">
+                <h2>📋 Tentang Saya</h2>
+            </div>
+            <p class="text-body">
+                Seorang profesional dengan rekam jejak solid selama lebih dari 5 tahun di bidang operasional administrasi, manajemen inventori, serta pemrosesan dokumen bisnis pada industri ritel terkemuka (seperti Hero Supermarket, TOPS, & AmandaMart). Memiliki pengalaman lintas divisi meliputi area <em>Produce</em>, <em>Daily Dairy</em>, hingga posisi kepemimpinan sebagai <strong>Kepala Toko</strong>.
+            </p>
+            <p class="text-body">
+                Memiliki keahlian kuat dalam pengolahan data menggunakan rumus Microsoft Excel tingkat lanjut, dipadukan dengan kemampuan teknis modern dalam membangun antarmuka web yang efisien dan responsif.
+            </p>
+        </section>
+
+        <!-- DATA PRIBADI & CLOUDFLARE SECURITY -->
+        <section class="card-section">
+            <div class="section-title flex-between">
+                <h2>👤 Data Pribadi</h2>
+                <button id="btn-unlock" class="btn-primary-sm" onclick="openPinModal()">
+                    🔒 Buka Data Sensitif
+                </button>
+            </div>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="info-label">Nama Lengkap</span>
+                    <span class="info-value">Yudi Dwiranto</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Agama</span>
+                    <span class="info-value">Islam</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Golongan Darah</span>
+                    <span class="info-value">O</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Alamat E-mail</span>
+                    <span class="info-value sensitive-blur" id="val-email">🔒 Tersimpan di Cloudflare</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">No. Telepon / WA</span>
+                    <span class="info-value sensitive-blur" id="val-phone">🔒 Tersimpan di Cloudflare</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Tanggal Lahir</span>
+                    <span class="info-value sensitive-blur" id="val-birthdate">🔒 Tersimpan di Cloudflare</span>
+                </div>
+                <div class="info-item full-width">
+                    <span class="info-label">Alamat Tinggal</span>
+                    <span class="info-value sensitive-blur" id="val-address">🔒 Tersimpan di Cloudflare Security Server</span>
                 </div>
             </div>
+        </section>
 
-            <!-- Tengah: Nama -->
-            <div class="header-center">
-                <h1>Yudi Dwiranto</h1>
-                <p class="subtitle">Staff Administrasi & Data Entry | Web Developer</p>
+        <!-- PENDIDIKAN -->
+        <section class="card-section">
+            <div class="section-title">
+                <h2>🎓 Riwayat Pendidikan</h2>
             </div>
-
-            <!-- Kanan: Tanggal & Waktu -->
-            <div class="header-right">
-                <p class="label">⏱ Waktu Saat Ini</p>
-                <p id="live-clock">--:--:--</p>
-                <p id="live-date">---------</p>
-            </div>
-        </header>
-
-        <!-- ================= BODY CONTENT ================= -->
-        <main class="body-content">
-            <!-- (Sisa kode isi section 'Tentang Saya', 'Data Pribadi', dll langsung lanjut di sini) -->
-
-
-            <!-- 1. TENTANG SAYA -->
-            <section class="section" id="tentang-saya">
-                <h2 class="section-title">📋 Tentang Saya</h2>
-                <p class="about-text">
-                    Seorang profesional dengan pengalaman lebih dari 5 tahun di bidang administrasi dan pengelolaan data, 
-                    dengan rekam jejak yang solid di beberapa perusahaan ritel terkemuka. Memiliki keahlian dalam operasional 
-                    administrasi perkantoran, manajemen data, serta pemrosesan dan verifikasi dokumen bisnis. Selain itu, 
-                    memiliki pengalaman lintas-divisi yang memperkaya kompetensi, meliputi area <em>Meat & Butcher</em>, 
-                    <em>Fresh Produce</em>, dan <em>Daily Dairy</em>.
-                </p>
-                <p class="about-text" style="margin-top:10px;">
-                    Memiliki ketertarikan mendalam terhadap teknologi dan pemrograman, yang diwujudkan melalui pengembangan 
-                    landing page dan proyek web lainnya. Beberapa proyek yang telah dikerjakan antara lain: 
-                    <strong>[Sebutkan Proyek Web/Landing Page Anda]</strong>. Kombinasi antara ketelitian administratif 
-                    dan kemampuan teknis ini menjadi fondasi dalam memberikan solusi kerja yang efisien dan terstruktur.
-                </p>
-            </section>
-
-            <!-- 2. DATA PRIBADI (DENGAN DATA SENSITIF TERSEMBUNYI) -->           
-<section class="section" id="data-pribadi">
-    <h2 class="section-title">👤 Data Pribadi</h2>
-    <table class="info-table" id="personalDataTable">
-        <tr>
-            <td>a. Nama Lengkap</td>
-            <td>: [Yudi Dwiranto]</td>
-        </tr>
-        
-        <!-- DATA SENSITIF: Alamat - HANYA PLACEHOLDER -->
-        <tr class="sensitive-row" data-field="alamat">
-            <td>b. Alamat</td>
-            <td>
-                <span class="web-placeholder">🔒 Data ini hanya muncul saat dicetak/PDF</span>
-                <span class="print-data" style="display:none;"></span>
-            </td>
-        </tr>
-        
-        <!-- DATA SENSITIF: Email -->
-        <tr class="sensitive-row" data-field="email">
-            <td>c. Alamat E-mail</td>
-            <td>
-                <span class="web-placeholder">🔒 Data ini hanya muncul saat dicetak/PDF</span>
-                <span class="print-data" style="display:none;"></span>
-            </td>
-        </tr>
-        
-        <!-- DATA NON-SENSITIF -->
-        <tr>
-            <td>d. Golongan Darah</td>
-            <td>: [0]</td>
-        </tr>
-        
-        <!-- DATA SENSITIF: No HP -->
-        <tr class="sensitive-row" data-field="nohp">
-            <td>e. No. HP</td>
-            <td>
-                <span class="web-placeholder">🔒 Data ini hanya muncul saat dicetak/PDF</span>
-                <span class="print-data" style="display:none;"></span>
-            </td>
-        </tr>
-        
-        <!-- DATA SENSITIF: Tanggal Lahir -->
-        <tr class="sensitive-row" data-field="ttl">
-            <td>f. Tanggal Lahir</td>
-            <td>
-                <span class="web-placeholder">🔒 Data ini hanya muncul saat dicetak/PDF</span>
-                <span class="print-data" style="display:none;"></span>
-            </td>
-        </tr>
-        
-        <tr>
-            <td>g. Agama</td>
-            <td>: [Islam]</td>
-        </tr>
-    </table>
-    
-    <!-- Notifikasi Privasi -->
-    <div class="privacy-notice web-only">
-        <p>ℹ️ <strong>Catatan Privasi:</strong> Data sensitif disembunyikan untuk keamanan. Data lengkap hanya muncul saat mencetak/PDF.</p>
-    </div>
-</section>
-            <!-- 3. PENDIDIKAN -->
-            <!-- 3. PENDIDIKAN (DENGAN LOGO & LINK) -->
-<section class="section" id="pendidikan">
-    <h2 class="section-title">🎓 Pendidikan</h2>
-    
-    <!-- a. SD -->
-    <div class="education-item">
-        <div class="edu-info">
-            <span class="edu-label">a. SD</span>
-            <span class="edu-detail">: [SD YPK] — [Tahun Masuk] s/d [Tahun Lulus]</span>
-        </div>
-        <a href="https://spmb.ypk.or.id/" 
-           target="_blank" 
-           rel="noopener noreferrer" 
-           class="edu-logo-link"
-           title="Kunjungi Website [YPK]">
-            <img src="assets/logo/logo-sd.png" 
-                 alt="Logo [Nama SD]" 
-                 class="edu-logo"
-                 onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\\'logo-fallback\\'>🏫</span>';">
-        </a>
-    </div>
-    
-    <!-- b. SMP -->
-    <div class="education-item">
-        <div class="edu-info">
-            <span class="edu-label">b. SMP</span>
-            <span class="edu-detail">: [SMP YPK] — [Tahun Masuk] s/d [Tahun Lulus]</span>
-        </div>
-        <a href="https://www.instagram.com/smpypkbontang/" 
-           target="_blank" 
-           rel="noopener noreferrer" 
-           class="edu-logo-link"
-           title="Kunjungi Website [SMP YPK]">
-            <img src="assets/logo/logo-smp.png" 
-                 alt="Logo [Nama SMP]" 
-                 class="edu-logo"
-                 onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\\'logo-fallback\\'>🏫</span>';">
-        </a>
-    </div>
-    
-    <!-- c. SMU -->
-    <div class="education-item">
-        <div class="edu-info">
-            <span class="edu-label">c. SMU</span>
-            <span class="edu-detail">: [SMU YPK] — [Tahun Masuk] s/d [Tahun Lulus]</span>
-        </div>
-        <a href="https://www.tiktok.com/@smaypkbontang" 
-           target="_blank" 
-           rel="noopener noreferrer" 
-           class="edu-logo-link"
-           title="Kunjungi Website [SMU YPK]">
-            <img src="assets/logo/logo-smu.png" 
-                 alt="Logo [Nama SMU]" 
-                 class="edu-logo"
-                 onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\\'logo-fallback\\'>🏫</span>';">
-        </a>
-    </div>
-    
-    <!-- d. Diploma -->
-    <div class="education-item">
-        <div class="edu-info">
-            <span class="edu-label">d. Diploma</span>
-            <span class="edu-detail">: [LP3I, Administrasi Bisnis] — [Tahun Masuk] s/d [Tahun Lulus]</span>
-        </div>
-        <a href="https://plb.ac.id/id/" 
-           target="_blank" 
-           rel="noopener noreferrer" 
-           class="edu-logo-link"
-           title="Kunjungi Website [LP3I Bandung]">
-            <img src="assets/logo/logo-diploma.png" 
-                 alt="Logo [Nama Institusi]" 
-                 class="edu-logo"
-                 onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\\'logo-fallback\\'>🎓</span>';">
-        </a>
-    </div>
-</section>
-            <!-- 4. PENGALAMAN BEKERJA -->
-            <!-- 4. PENGALAMAN BEKERJA (DENGAN LOGO & LINK) -->
-<section class="section" id="pengalaman">
-    <h2 class="section-title">💼 Pengalaman Bekerja</h2>
-
-    <!-- A. PT Sanjaya Tama Lestari -->
-    <div class="experience-item">
-        <div class="experience-header">
-            <div class="experience-title">
-                <h3>A. PT. Sanjaya Tama Lestari</h3>
-                <p class="role">SPB (Sales Promotion Boy)</p>
-            </div>
-            <a href="https://www.instagram.com/sanjayatamalestari.group/?hl=en" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               class="company-logo-link"
-               title="Kunjungi Website PT. Sanjaya Tama Lestari">
-                <img src="assets/logo/logo-sanjaya-tama.png" 
-                     alt="Logo PT. Sanjaya Tama Lestari" 
-                     class="company-logo"
-                     onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\\'logo-fallback\\'>🏢</span>';">
-            </a>
-        </div>
-        <div class="definition">
-            <strong>Definisi:</strong> SPB adalah tenaga pemasaran yang bertugas di area penjualan untuk mempromosikan dan menawarkan produk langsung kepada pelanggan.
-        </div>
-        <ul>
-            <li>Memajang produk sesuai standar visual perusahaan</li>
-            <li>Menjelaskan fitur dan manfaat produk kepada pelanggan</li>
-            <li>Mencatat stok dan memastikan ketersediaan barang</li>
-            <li>Mencapai target penjualan harian dan mingguan</li>
-            <li>Melaporkan hasil aktivitas promosi kepada supervisor</li>
-        </ul>
-    </div>
-
-    <!-- B. PT Putra Serasi Pioneerindo / TOPS -->
-    <div class="experience-item">
-        <div class="experience-header">
-            <div class="experience-title">
-                <h3>B. PT. Putra Serasi Pioneerindo / TOPS</h3>
-                <p class="role">Butcher</p>
-            </div>
-            <a href="https://www.topsmarkets.com/" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               class="company-logo-link"
-               title="Kunjungi Website TOPS">
-                <img src="assets/logo/logo-tops.png" 
-                     alt="Logo TOPS" 
-                     class="company-logo"
-                     onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\\'logo-fallback\\'>🏢</span>';">
-            </a>
-        </div>
-        <div class="definition">
-            <strong>Definisi:</strong> Butcher adalah tenaga profesional yang bertanggung jawab menangani daging segar, mulai dari pemotongan, pemilahan, hingga pengemasan sesuai standar komersial.
-        </div>
-        <ul>
-            <li>Memotong dan mengiris daging sesuai standar komersial</li>
-            <li>Memisahkan daging berdasarkan grade dan jenis</li>
-            <li>Menjaga kualitas, kesegaran, dan kebersihan area kerja</li>
-            <li>Menimbang, memberi label harga, dan memajang daging di etalase</li>
-            <li>Memastikan kepatuhan terhadap standar keamanan pangan (HACCP)</li>
-        </ul>
-    </div>
-
-    <!-- C. PT Hero Supermarket Tbk -->
-    <div class="experience-item">
-        <div class="experience-header">
-            <div class="experience-title">
-                <h3>C. PT. Hero Supermarket Tbk.</h3>
-            </div>
-            <a href="https://www.instagram.com/herosupermarket/?hl=en" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               class="company-logo-link"
-               title="Kunjungi Website PT. Hero Supermarket Tbk.">
-                <img src="assets/logo/logo-hero.png" 
-                     alt="Logo Hero Supermarket" 
-                     class="company-logo"
-                     onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\\'logo-fallback\\'>🏢</span>';">
-            </a>
-        </div>
-        
-        <p class="role" style="margin-top:10px;">C.1 Staff Administrasi & Data Entry</p>
-        <div class="definition">
-            <strong>Definisi:</strong> Posisi yang bertanggung jawab dalam pengelolaan dokumen administratif dan input data secara akurat ke dalam sistem perusahaan.
-        </div>
-        <ul>
-            <li>Memasukkan data penjualan, inventori, dan faktur ke sistem</li>
-            <li>Memverifikasi keakuratan data sebelum diproses</li>
-            <li>Mengarsip dokumen fisik dan digital secara sistematis</li>
-            <li>Menyusun laporan harian dan mingguan untuk manajemen</li>
-        </ul>
-
-        <p class="role" style="margin-top:10px;">C.2 Staff Butcher</p>
-        <div class="definition">
-            <strong>Definisi:</strong> Tenaga ahli daging yang bertugas memastikan kualitas dan tampilan produk daging di gerai ritel.
-        </div>
-        <ul>
-            <li>Melakukan pemotongan daging sesuai permintaan pelanggan</li>
-            <li>Menjaga kebersihan dan sanitasi area kerja</li>
-            <li>Melakukan quality control terhadap produk daging</li>
-            <li>Menyusun display daging di showcase pendingin</li>
-        </ul>
-
-        <p class="role" style="margin-top:10px;">C.3 Staff Produce</p>
-        <div class="definition">
-            <strong>Definisi:</strong> Staff Produce bertanggung jawab atas penanganan dan perawatan produk buah dan sayur segar.
-        </div>
-        <ul>
-            <li>Menyeleksi dan memilah produk segar sesuai grade</li>
-            <li>Menyusun dan merotasi display sesuai FIFO (First In First Out)</li>
-            <li>Memonitor suhu penyimpanan dan kesegaran produk</li>
-            <li>Mengidentifikasi dan memisahkan produk yang tidak layak jual</li>
-        </ul>
-
-        <p class="role" style="margin-top:10px;">C.4 Staff Daily Dairy</p>
-        <div class="definition">
-            <strong>Definisi:</strong> Staff Daily Dairy adalah personel yang menangani produk susu dan turunannya (yogurt, keju, mentega) di area pendingin.
-        </div>
-        <ul>
-            <li>Memastikan ketersediaan dan kelengkapan produk susu harian</li>
-            <li>Memeriksa tanggal kedaluwarsa dan melakukan rotasi stok</li>
-            <li>Menjaga kebersihan rak dan area pendingin</li>
-            <li>Menerima dan memeriksa kiriman produk susu dari pemasok</li>
-        </ul>
-    </div>
-
-    <!-- D. TOSAMA -->
-    <div class="experience-item">
-        <div class="experience-header">
-            <div class="experience-title">
-                <h3>D. TOSAMA (Toko Sayur Mayur)</h3>
-            </div>
-            <a href="https://www.instagram.com/tosamaofficial/?hl=en" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               class="company-logo-link"
-               title="Kunjungi Website TOSAMA">
-                <img src="assets/logo/logo-tosama.png" 
-                     alt="Logo TOSAMA" 
-                     class="company-logo"
-                     onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\\'logo-fallback\\'>🏢</span>';">
-            </a>
-        </div>
-        
-        <p class="role" style="margin-top:10px;">D.1 Kepala Toko</p>
-        <div class="definition">
-            <strong>Definisi:</strong> Kepala Toko adalah pimpinan operasional yang bertanggung jawab penuh atas kinerja dan pengelolaan satu unit toko secara keseluruhan.
-        </div>
-        <ul>
-            <li>Memimpin dan mengawasi seluruh staff toko</li>
-            <li>Menyusun jadwal kerja dan pembagian tugas</li>
-            <li>Mengelola stok dan melakukan pemesanan barang</li>
-            <li>Menganalisis pencapaian target penjualan</li>
-            <li>Menangani keluhan pelanggan dan memastikan service excellence</li>
-        </ul>
-
-        <p class="role" style="margin-top:10px;">D.2 Staff Admin DC (Distribution Center)</p>
-        <div class="definition">
-            <strong>Definisi:</strong> Staff Admin DC adalah personel administrasi yang mendukung operasional pusat distribusi barang.
-        </div>
-        <ul>
-            <li>Mencatat dan menginput data barang masuk dan keluar</li>
-            <li>Memproses dokumen pengiriman dan penerimaan</li>
-            <li>Mengkoordinasikan jadwal distribusi dengan toko tujuan</li>
-            <li>Memonitor stok di gudang distribusi</li>
-            <li>Melakukan rekonsiliasi data inventori secara berkala</li>
-        </ul>
-    </div>
-
-    <!-- E. AmandaMart -->
-    <div class="experience-item">
-        <div class="experience-header">
-            <div class="experience-title">
-                <h3>E. AmandaMart</h3>
-                <p class="role">Kepala Toko Midi Market</p>
-            </div>
-            <a href="https://amandamart.com/" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               class="company-logo-link"
-               title="Kunjungi Website AmandaMart">
-                <img src="assets/logo/logo-amandamart.png" 
-                     alt="Logo AmandaMart" 
-                     class="company-logo"
-                     onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\\'logo-fallback\\'>🏢</span>';">
-            </a>
-        </div>
-        <div class="definition">
-            <strong>Definisi:</strong> Kepala Toko Midi Market adalah manajer operasional yang bertanggung jawab mengelola toko format menengah (midi) secara menyeluruh.
-        </div>
-        <ul>
-            <li>Mengawasi operasional harian dan seluruh karyawan</li>
-            <li>Menyusun strategi peningkatan penjualan</li>
-            <li>Mengontrol biaya operasional dan cash flow toko</li>
-            <li>Memastikan implementasi SOP perusahaan berjalan efektif</li>
-            <li>Melaporkan performa toko kepada area manager</li>
-        </ul>
-    </div>
-</section>
-
-            <!-- 5. KEAHLIAN -->
-            <section class="section" id="keahlian">
-                <h2 class="section-title">⚡ Keahlian</h2>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <h4>📊 Microsoft Excel Mahir</h4>
-                        <p>Formula lanjutan, Pivot Table, VLOOKUP/HLOOKUP, visualisasi data, dan dashboard reporting untuk analisis data dan pelaporan.</p>
-                    </div>
-                    <div class="skill-card">
-                        <h4>🌐 Web Development</h4>
-                        <p>Membangun landing page responsif menggunakan HTML, CSS, JavaScript, dan pengelolaan konten web untuk kebutuhan bisnis.</p>
-                    </div>
-                    <div class="skill-card">
-                        <h4>🤖 Prompt Engineering AI</h4>
-                        <p>Merancang prompt terstruktur untuk mengoptimalkan output AI (ChatGPT, Claude) guna produktivitas dan otomasi tugas.</p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Diploma — LP3I Bandung</h3>
+                        <span class="timeline-sub">Administrasi Bisnis</span>
                     </div>
                 </div>
-            </section>
-
-            <!-- 6. GALERI KEGIATAN -->
-            <section class="section" id="galeri">
-                <h2 class="section-title">📸 Galeri Kegiatan</h2>
-                <div class="gallery-grid">
-                    <!-- Baris 1 -->
-                    <div class="gallery-item">
-                        <div class="gallery-img"><img src="assets/gallery/kegiatan-01.jpg" alt="Kegiatan 1"></div>
-                        <div class="gallery-caption">[Nama Kegiatan 1]</div>
-                    </div>
-                    <div class="gallery-item">
-                        <div class="gallery-img"><img src="assets/gallery/kegiatan-02.jpg" alt="Kegiatan 2"></div>
-                        <div class="gallery-caption">[Nama Kegiatan 2]</div>
-                    </div>
-                    <div class="gallery-item">
-                        <div class="gallery-img"><img src="assets/gallery/kegiatan-03.jpg" alt="Kegiatan 3"></div>
-                        <div class="gallery-caption">[Nama Kegiatan 3]</div>
-                    </div>
-                    <!-- Baris 2 -->
-                    <div class="gallery-item">
-                        <div class="gallery-img"><img src="assets/gallery/kegiatan-04.jpg" alt="Kegiatan 4"></div>
-                        <div class="gallery-caption">[Nama Kegiatan 4]</div>
-                    </div>
-                    <div class="gallery-item">
-                        <div class="gallery-img"><img src="assets/gallery/kegiatan-05.jpg" alt="Kegiatan 5"></div>
-                        <div class="gallery-caption">[Nama Kegiatan 5]</div>
-                    </div>
-                    <div class="gallery-item">
-                        <div class="gallery-img"><img src="assets/gallery/kegiatan-06.jpg" alt="Kegiatan 6"></div>
-                        <div class="gallery-caption">[Nama Kegiatan 6]</div>
-                    </div>
-                    <!-- Baris 3 -->
-                    <div class="gallery-item">
-                        <div class="gallery-img"><img src="assets/gallery/kegiatan-07.jpg" alt="Kegiatan 7"></div>
-                        <div class="gallery-caption">[Nama Kegiatan 7]</div>
-                    </div>
-                    <div class="gallery-item">
-                        <div class="gallery-img"><img src="assets/gallery/kegiatan-08.jpg" alt="Kegiatan 8"></div>
-                        <div class="gallery-caption">[Nama Kegiatan 8]</div>
-                    </div>
-                    <div class="gallery-item">
-                        <div class="gallery-img"><img src="assets/gallery/kegiatan-09.jpg" alt="Kegiatan 9"></div>
-                        <div class="gallery-caption">[Nama Kegiatan 9]</div>
-                    </div>
-                    <!-- Baris 4 -->
-                    <div class="gallery-item">
-                        <div class="gallery-img"><img src="assets/gallery/kegiatan-10.jpg" alt="Kegiatan 10"></div>
-                        <div class="gallery-caption">[Nama Kegiatan 10]</div>
-                    </div>
-                    <div class="gallery-item">
-                        <div class="gallery-img"><img src="assets/gallery/kegiatan-11.jpg" alt="Kegiatan 11"></div>
-                        <div class="gallery-caption">[Nama Kegiatan 11]</div>
-                    </div>
-                    <div class="gallery-item">
-                        <div class="gallery-img"><img src="assets/gallery/kegiatan-12.jpg" alt="Kegiatan 12"></div>
-                        <div class="gallery-caption">[Nama Kegiatan 12]</div>
-                    </div>
-                    <!-- Baris 5 -->
-                    <div class="gallery-item">
-                        <div class="gallery-img"><img src="assets/gallery/kegiatan-13.jpg" alt="Kegiatan 13"></div>
-                        <div class="gallery-caption">[Nama Kegiatan 13]</div>
-                    </div>
-                    <div class="gallery-item">
-                        <div class="gallery-img"><img src="assets/gallery/kegiatan-14.jpg" alt="Kegiatan 14"></div>
-                        <div class="gallery-caption">[Nama Kegiatan 14]</div>
-                    </div>
-                    <div class="gallery-item">
-                        <div class="gallery-img"><img src="assets/gallery/kegiatan-15.jpg" alt="Kegiatan 15"></div>
-                        <div class="gallery-caption">[Nama Kegiatan 15]</div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>SMU YPK Bontang</h3>
+                        <span class="timeline-sub">Sekolah Menengah Umum</span>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-        </main>
-        
-        <!-- Footer dengan copyright -->
-        <footer class="footer web-only">
-            <p>&copy; 2026 [Yudi Dwiranto] — CV Portofolio Online</p>
-        </footer>
+        <!-- PENGALAMAN KERJA -->
+        <section class="card-section">
+            <div class="section-title">
+                <h2>💼 Pengalaman Bekerja</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>AmandaMart — Kepala Toko Midi Market</h3>
+                        <p>Mengelola operasional harian toko format menengah, strategi pencapaian omzet, manajemen stok, serta supervisi tim operasional.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>TOSAMA (Toko Sayur Mayur)</h3>
+                        <p><strong>Kepala Toko & Staff Admin DC:</strong> Memimpin operasional outlet serta pencatatan & rekonsiliasi data inventori di Distribution Center.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>PT. Hero Supermarket Tbk.</h3>
+                        <p><strong>Staff Administrasi, Butcher, Produce & Daily Dairy:</strong> Bertanggung jawab atas input data penjualan, pengarsipan dokumen, serta pemeliharaan standar kualitas produk ritel.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>PT. Putra Serasi Pioneerindo / TOPS — Butcher Specialist</h3>
+                        <p>Penanganan, pemotongan, serta kontrol kualitas standar HACCP untuk kategori produk daging segar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- KEAHLIAN -->
+        <section class="card-section">
+            <div class="section-title">
+                <h2>⚡ Keahlian Utama</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">📊</div>
+                    <h3>Microsoft Excel Mahir</h3>
+                    <p>Rumus Kompleks (VLOOKUP, INDEX/MATCH), Pivot Table, Visualisasi Data, & Dashboard Analytics.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🌐</div>
+                    <h3>Web Development</h3>
+                    <p>Membangun Landing Page Modern, HTML5, CSS3, JavaScript ES6+, & Integrasi API Cloudflare.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🤖</div>
+                    <h3>Prompt Engineering AI</h3>
+                    <p>Optimasi alur kerja administrasi & pengembangan kode menggunakan asistensi AI modern (Gemini / LLM).</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>© 2026 Yudi Dwiranto — Professional CV Portfolio</p>
+            <p class="ai-credit">Dikembangkan dengan integrasi <span class="gemini-text-glow">Google Gemini AI 🤖</span></p>
+        </div>
+    </footer>
+
+    <!-- GEMINI FLOATING WIDGET (GLOWING ANIMATION) -->
+    <div class="gemini-float-btn" title="Tanya AI Gemini">
+        <div class="gemini-icon-wrapper">
+            <svg class="gemini-sparkle" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 0C12 6.62742 6.62742 12 0 12C6.62742 12 12 17.3726 12 24C12 17.3726 17.3726 12 24 12C17.3726 12 12 6.62742 12 0Z" fill="url(#gemini-grad)"/>
+                <defs>
+                    <linearGradient id="gemini-grad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#4285F4"/>
+                        <stop offset="50%" stop-color="#9B51E0"/>
+                        <stop offset="100%" stop-color="#E91E63"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+        <span class="float-text">Ask Gemini</span>
     </div>
 
-    <!-- External JavaScript -->
-    <script src="js/main.js"></script>
-
-    <!-- ================= FOOTER SOSIAL MEDIA ================= -->
-<footer class="social-footer">
-    <div class="footer-content">
-        <div class="footer-left">
-            <p>&copy; 2024 [Yudi Dwiranto] — CV Portofolio Online</p>
-        </div>
-        <div class="footer-right">
-            <p class="footer-tagline">📱 Hubungi & Terhubung:</p>
-            <div class="social-links">
-               
-                <!-- LinkedIn -->
-                <a href="https://linkedin.com/in/username-lo" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="social-link linkedin"
-                   title="LinkedIn Profile">
-                    <span class="social-icon">💼</span>
-                    <span class="social-text">LinkedIn</span>
-                </a>
-                
-                <!-- GitHub -->
-                <a href="https://github.com/cahsragen77" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="social-link github"
-                   title="GitHub Profile">
-                    <span class="social-icon">🐙</span>
-                    <span class="social-text">GitHub</span>
-                </a>
-                
-                <!-- Instagram -->
-                <a href="https://instagram.com/username-lo" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="social-link instagram"
-                   title="Instagram">
-                    <span class="social-icon">📸</span>
-                    <span class="social-text">Instagram</span>
-                </a>
-                
-                <!-- WhatsApp -->
-                <a href="https://wa.me/6281234567890" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="social-link whatsapp"
-                   title="Chat via WhatsApp">
-                    <span class="social-icon">💬</span>
-                    <span class="social-text">WhatsApp</span>
-                </a>
-                
-                <!-- Telegram -->
-                <a href="https://t.me/username-lo" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="social-link telegram"
-                   title="Telegram">
-                    <span class="social-icon">✈️</span>
-                    <span class="social-text">Telegram</span>
-                </a>
-                
-                <!-- X (Twitter) -->
-                <a href="https://x.com/username-lo" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="social-link twitter"
-                   title="X (Twitter)">
-                    <span class="social-icon">🐦</span>
-                    <span class="social-text">X</span>
-                </a>
-                
-                <!-- tiktok -->
-                <a href="https://x.com/username-lo" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="social-link twitter"
-                   title="X (Tiktok)">
-                    <span class="social-icon">🐦</span>
-                    <span class="social-text">X</span>
-                </a>
-                
-                <!-- Facebook -->
-                <a href="https://facebook.com/username-lo" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="social-link facebook"
-                   title="Facebook">
-                    <span class="social-icon">👤</span>
-                    <span class="social-text">Facebook</span>
-                </a>
-
-                 <div class="footer-bottom">
-                    <p>Dibuat dengan bantuan <a href="https://chat.deepseek.com/" target="_blank" class="deepseek-credit">DeepSeek AI 🤖</a></p>
-                </div>
-                
-                </div>
+    <!-- PIN MODAL -->
+    <div id="pin-modal" class="modal-backdrop">
+        <div class="modal-box">
+            <h3>🔒 Otentikasi Cloudflare</h3>
+            <p>Masukkan 6-digit PIN untuk dekripsi data sensitif langsung dari Cloudflare Edge.</p>
+            <input type="password" id="input-pin" maxlength="6" placeholder="Masukkan PIN..." autocomplete="off">
+            <div class="modal-actions">
+                <button class="btn-secondary" onclick="closePinModal()">Batal</button>
+                <button class="btn-primary" onclick="submitPin()">Buka Data</button>
+            </div>
+            <div id="modal-error" class="error-msg"></div>
         </div>
     </div>
-    
-    
-</footer>
 
-    <!-- ================= LOGO DEEPSEEK MELAYANG ================= -->
-<div class="deepseek-float" id="deepseekFloat">
-    <a href="https://chat.deepseek.com/" 
-       target="_blank" 
-       rel="noopener noreferrer"
-       class="deepseek-link"
-       title="Tanya DeepSeek?">
-        <div class="deepseek-logo-container">
-            <img src="assets/logo/deepseek-logo.png" 
-                 alt="DeepSeek AI" 
-                 class="deepseek-logo-img"
-                 onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\\'deepseek-fallback\\'>🤖</span>';">
-            <span class="deepseek-tooltip">Tanya DeepSeek?</span>
-        </div>
-    </a>
-</div>
+    <script src="script.js"></script>
 </body>
 </html>
