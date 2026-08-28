@@ -1,224 +1,59 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yudi Dwiranto — Professional CV & Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-</head>
-<body>
-
-    <!-- HERO / HEADER SECTION -->
-    <header class="hero-header">
-        <div class="container hero-container">
-            <div class="profile-card">
-                <div class="avatar-wrapper">
-                    <img src="assets/profile-photo.jpg" alt="Yudi Dwiranto" class="profile-img" onerror="this.src='https://via.placeholder.com/150'">
-                    <span class="status-badge"></span>
-                </div>
-                <div class="profile-info">
-                    <span class="role-tag">Staff Administrasi & Data Entry | Web Developer</span>
-                    <h1>Yudi Dwiranto</h1>
-                    <p class="tagline">Pengalaman 5+ Tahun Mengelola Operasional Ritel, Formulasi Excel Lanjutan & Pengembangan Web Modern.</p>
-                    <div class="skills-badges">
-                        <span>📊 Excel Specialist</span>
-                        <span>📋 Admin & Data Entry</span>
-                        <span>🌐 Web Developer</span>
-                    </div>
-                </div>
-            </div>
-            <div class="widget-card">
-                <div class="widget-header">⏱ WAKTU SAAT INI</div>
-                <div id="live-time" class="widget-time">00:00:00</div>
-                <div id="live-date" class="widget-date">Loading...</div>
-            </div>
-        </div>
-    </header>
-
-    <!-- MAIN CONTENT -->
-    <main class="container main-content">
-
-        <!-- TENTANG SAYA -->
-        <section class="card-section">
-            <div class="section-title">
-                <h2>📋 Tentang Saya</h2>
-            </div>
-            <p class="text-body">
-                Seorang profesional dengan rekam jejak solid selama lebih dari 5 tahun di bidang operasional administrasi, manajemen inventori, serta pemrosesan dokumen bisnis pada industri ritel terkemuka (seperti Hero Supermarket, TOPS, & AmandaMart). Memiliki pengalaman lintas divisi meliputi area <em>Produce</em>, <em>Daily Dairy</em>, hingga posisi kepemimpinan sebagai <strong>Kepala Toko</strong>.
-            </p>
-            <p class="text-body">
-                Memiliki keahlian kuat dalam pengolahan data menggunakan rumus Microsoft Excel tingkat lanjut, dipadukan dengan kemampuan teknis modern dalam membangun antarmuka web yang efisien dan responsif.
-            </p>
-        </section>
-
-        <!-- DATA PRIBADI & CLOUDFLARE SECURITY -->
-        <section class="card-section">
-            <div class="section-title flex-between">
-                <h2>👤 Data Pribadi</h2>
-                <button id="btn-unlock" class="btn-primary-sm" onclick="openPinModal()">
-                    🔒 Buka Data Sensitif
-                </button>
-            </div>
-            <div class="info-grid">
-                <div class="info-item">
-                    <span class="info-label">Nama Lengkap</span>
-                    <span class="info-value">Yudi Dwiranto</span>
-                </div>
-                <div class="info-item">
-                    <span class="info-label">Agama</span>
-                    <span class="info-value">Islam</span>
-                </div>
-                <div class="info-item">
-                    <span class="info-label">Golongan Darah</span>
-                    <span class="info-value">O</span>
-                </div>
-                <div class="info-item">
-                    <span class="info-label">Alamat E-mail</span>
-                    <span class="info-value sensitive-blur" id="val-email">🔒 Tersimpan di Cloudflare</span>
-                </div>
-                <div class="info-item">
-                    <span class="info-label">No. Telepon / WA</span>
-                    <span class="info-value sensitive-blur" id="val-phone">🔒 Tersimpan di Cloudflare</span>
-                </div>
-                <div class="info-item">
-                    <span class="info-label">Tanggal Lahir</span>
-                    <span class="info-value sensitive-blur" id="val-birthdate">🔒 Tersimpan di Cloudflare</span>
-                </div>
-                <div class="info-item full-width">
-                    <span class="info-label">Alamat Tinggal</span>
-                    <span class="info-value sensitive-blur" id="val-address">🔒 Tersimpan di Cloudflare Security Server</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- PENDIDIKAN -->
-        <section class="card-section">
-            <div class="section-title">
-                <h2>🎓 Riwayat Pendidikan</h2>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Diploma — LP3I Bandung</h3>
-                        <span class="timeline-sub">Administrasi Bisnis</span>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>SMU YPK Bontang</h3>
-                        <span class="timeline-sub">Sekolah Menengah Umum</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- PENGALAMAN KERJA -->
-        <section class="card-section">
-            <div class="section-title">
-                <h2>💼 Pengalaman Bekerja</h2>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>AmandaMart — Kepala Toko Midi Market</h3>
-                        <p>Mengelola operasional harian toko format menengah, strategi pencapaian omzet, manajemen stok, serta supervisi tim operasional.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>TOSAMA (Toko Sayur Mayur)</h3>
-                        <p><strong>Kepala Toko & Staff Admin DC:</strong> Memimpin operasional outlet serta pencatatan & rekonsiliasi data inventori di Distribution Center.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>PT. Hero Supermarket Tbk.</h3>
-                        <p><strong>Staff Administrasi, Butcher, Produce & Daily Dairy:</strong> Bertanggung jawab atas input data penjualan, pengarsipan dokumen, serta pemeliharaan standar kualitas produk ritel.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>PT. Putra Serasi Pioneerindo / TOPS — Butcher Specialist</h3>
-                        <p>Penanganan, pemotongan, serta kontrol kualitas standar HACCP untuk kategori produk daging segar.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- KEAHLIAN -->
-        <section class="card-section">
-            <div class="section-title">
-                <h2>⚡ Keahlian Utama</h2>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">📊</div>
-                    <h3>Microsoft Excel Mahir</h3>
-                    <p>Rumus Kompleks (VLOOKUP, INDEX/MATCH), Pivot Table, Visualisasi Data, & Dashboard Analytics.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🌐</div>
-                    <h3>Web Development</h3>
-                    <p>Membangun Landing Page Modern, HTML5, CSS3, JavaScript ES6+, & Integrasi API Cloudflare.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🤖</div>
-                    <h3>Prompt Engineering AI</h3>
-                    <p>Optimasi alur kerja administrasi & pengembangan kode menggunakan asistensi AI modern (Gemini / LLM).</p>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container footer-content">
-            <p>© 2026 Yudi Dwiranto — Professional CV Portfolio</p>
-            <p class="ai-credit">Dikembangkan dengan integrasi <span class="gemini-text-glow">Google Gemini AI 🤖</span></p>
-        </div>
-    </footer>
-
-    <!-- GEMINI FLOATING WIDGET (GLOWING ANIMATION) -->
-    <div class="gemini-float-btn" title="Tanya AI Gemini">
-        <div class="gemini-icon-wrapper">
-            <svg class="gemini-sparkle" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 0C12 6.62742 6.62742 12 0 12C6.62742 12 12 17.3726 12 24C12 17.3726 17.3726 12 24 12C17.3726 12 12 6.62742 12 0Z" fill="url(#gemini-grad)"/>
-                <defs>
-                    <linearGradient id="gemini-grad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
-                        <stop offset="0%" stop-color="#4285F4"/>
-                        <stop offset="50%" stop-color="#9B51E0"/>
-                        <stop offset="100%" stop-color="#E91E63"/>
-                    </linearGradient>
-                </defs>
-            </svg>
-        </div>
-        <span class="float-text">Ask Gemini</span>
+<section class="section" id="data-pribadi">
+    <h2 class="section-title">👤 Data Pribadi</h2>
+    <table class="info-table" id="personalDataTable">
+        <tr>
+            <td>a. Nama Lengkap</td>
+            <td id="val-fullname">[Nama Lengkap Anda]</td>
+        </tr>
+        <tr class="sensitive-row" data-field="alamat">
+            <td>b. Alamat</td>
+            <td>
+                <span class="web-placeholder" id="addr-placeholder">🔒 Data sensitif terkunci</span>
+                <span class="print-data" id="val-address" style="display:none;"></span>
+            </td>
+        </tr>
+        <tr class="sensitive-row" data-field="email">
+            <td>c. Alamat E-mail</td>
+            <td>
+                <span class="web-placeholder" id="email-placeholder">🔒 Data sensitif terkunci</span>
+                <span class="print-data" id="val-email" style="display:none;"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>d. Golongan Darah</td>
+            <td id="val-bloodtype">: [Golongan Darah]</td>
+        </tr>
+        <tr class="sensitive-row" data-field="nohp">
+            <td>e. No. HP</td>
+            <td>
+                <span class="web-placeholder" id="phone-placeholder">🔒 Data sensitif terkunci</span>
+                <span class="print-data" id="val-phone" style="display:none;"></span>
+            </td>
+        </tr>
+        <tr class="sensitive-row" data-field="ttl">
+            <td>f. Tanggal Lahir</td>
+            <td>
+                <span class="web-placeholder" id="birth-placeholder">🔒 Data sensitif terkunci</span>
+                <span class="print-data" id="val-birthdate" style="display:none;"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>g. Agama</td>
+            <td id="val-religion">: [Agama]</td>
+        </tr>
+    </table>
+    
+    <!-- Tombol Buka Data Sensitif -->
+    <div style="margin-top:15px; text-align:center;" class="web-only">
+        <button id="btn-unlock" class="unlock-btn" onclick="openPinModal()">
+            🔓 Buka Data Sensitif dengan PIN
+        </button>
+        <p style="font-size:11px; color:#888; margin-top:5px;">
+            (Data akan terbuka setelah verifikasi PIN dari Cloudflare)
+        </p>
     </div>
 
-    <!-- PIN MODAL -->
-    <div id="pin-modal" class="modal-backdrop">
-        <div class="modal-box">
-            <h3>🔒 Otentikasi Cloudflare</h3>
-            <p>Masukkan 6-digit PIN untuk dekripsi data sensitif langsung dari Cloudflare Edge.</p>
-            <input type="password" id="input-pin" maxlength="6" placeholder="Masukkan PIN..." autocomplete="off">
-            <div class="modal-actions">
-                <button class="btn-secondary" onclick="closePinModal()">Batal</button>
-                <button class="btn-primary" onclick="submitPin()">Buka Data</button>
-            </div>
-            <div id="modal-error" class="error-msg"></div>
-        </div>
+    <div class="privacy-notice web-only">
+        <p>ℹ️ <strong>Catatan Privasi:</strong> Data sensitif disembunyikan untuk keamanan. Data lengkap hanya muncul saat mencetak/PDF.</p>
     </div>
-
-    <script src="js/script.js"></script>
-</body>
-</html>
+</section>
