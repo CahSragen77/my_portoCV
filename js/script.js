@@ -1,5 +1,5 @@
 // ============================================
-// REAL-TIME CLOCK (Diperbaiki ID-nya)
+// REAL-TIME CLOCK
 // ============================================
 function updateClock() {
     const now = new Date();
@@ -11,7 +11,6 @@ function updateClock() {
         day: 'numeric' 
     });
     
-    // PERBAIKAN: Gunakan ID yang benar dari HTML
     const clockEl = document.getElementById('live-clock');
     const dateEl = document.getElementById('live-date');
     
@@ -19,7 +18,6 @@ function updateClock() {
     if (dateEl) dateEl.textContent = dateStr;
 }
 
-// Jalankan clock
 setInterval(updateClock, 1000);
 updateClock();
 
@@ -72,7 +70,6 @@ async function submitPin() {
         const result = await response.json();
 
         if (result.success) {
-            // === TAMPILKAN DATA DI TABEL ===
             const data = result.data;
             
             // Email
@@ -115,10 +112,7 @@ async function submitPin() {
             const btnUnlock = document.getElementById('btn-unlock');
             if (btnUnlock) btnUnlock.style.display = 'none';
             
-            // Tutup modal
             closePinModal();
-            
-            // Tampilkan notifikasi sukses
             alert('✅ Data sensitif berhasil dibuka!');
         } else {
             errorEl.textContent = '❌ ' + (result.message || 'PIN Salah!');
@@ -132,16 +126,14 @@ async function submitPin() {
 }
 
 // ============================================
-// HANDLER UNTUK TOMBOL UNLOCK DI TABEL
+// EVENT LISTENER
 // ============================================
 document.addEventListener('DOMContentLoaded', function() {
-    // Pastikan tombol unlock terhubung
     const unlockBtn = document.getElementById('btn-unlock');
     if (unlockBtn) {
         unlockBtn.addEventListener('click', openPinModal);
     }
     
-    // Enter key di input PIN
     const pinInput = document.getElementById('input-pin');
     if (pinInput) {
         pinInput.addEventListener('keydown', function(e) {
