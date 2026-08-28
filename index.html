@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="CV Portofolio Profesional - Staff Administrasi & Data Entry dengan pengalaman lebih dari 5 tahun di industri ritel dan keahlian dalam pengembangan web.">
     <meta name="keywords" content="CV, Portofolio, Administrasi, Data Entry, Butcher, Retail, Web Developer, Profesional">
-    <meta name="author" content="Nama Anda">
-    <title>CV Profesional | Portofolio — [Nama Anda]</title>
+    <meta name="author" content="Yudi Dwiranto">
+    <title>CV Profesional | Portofolio — Yudi Dwiranto</title>
     
     <!-- External CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -69,343 +69,319 @@
             </section>
 
             <!-- 2. DATA PRIBADI (DENGAN DATA SENSITIF TERSEMBUNYI) -->           
-<section class="section" id="data-pribadi">
-    <h2 class="section-title">👤 Data Pribadi</h2>
-    <table class="info-table" id="personalDataTable">
-        <tr>
-            <td>a. Nama Lengkap</td>
-            <td id="val-fullname">[Nama Lengkap Anda]</td>
-        </tr>
-        <tr class="sensitive-row" data-field="alamat">
-            <td>b. Alamat</td>
-            <td>
-                <span class="web-placeholder" id="addr-placeholder">🔒 Data sensitif terkunci</span>
-                <span class="print-data" id="val-address" style="display:none;"></span>
-            </td>
-        </tr>
-        <tr class="sensitive-row" data-field="email">
-            <td>c. Alamat E-mail</td>
-            <td>
-                <span class="web-placeholder" id="email-placeholder">🔒 Data sensitif terkunci</span>
-                <span class="print-data" id="val-email" style="display:none;"></span>
-            </td>
-        </tr>
-        <tr>
-            <td>d. Golongan Darah</td>
-            <td id="val-bloodtype">: [Golongan Darah]</td>
-        </tr>
-        <tr class="sensitive-row" data-field="nohp">
-            <td>e. No. HP</td>
-            <td>
-                <span class="web-placeholder" id="phone-placeholder">🔒 Data sensitif terkunci</span>
-                <span class="print-data" id="val-phone" style="display:none;"></span>
-            </td>
-        </tr>
-        <tr class="sensitive-row" data-field="ttl">
-            <td>f. Tanggal Lahir</td>
-            <td>
-                <span class="web-placeholder" id="birth-placeholder">🔒 Data sensitif terkunci</span>
-                <span class="print-data" id="val-birthdate" style="display:none;"></span>
-            </td>
-        </tr>
-        <tr>
-            <td>g. Agama</td>
-            <td id="val-religion">: [Agama]</td>
-        </tr>
-    </table>
-    
-    <!-- Tombol Buka Data Sensitif -->
-    <div style="margin-top:15px; text-align:center;" class="web-only">
-        <button id="btn-unlock" class="unlock-btn" onclick="openPinModal()">
-            🔓 Buka Data Sensitif dengan PIN
-        </button>
-        <p style="font-size:11px; color:#888; margin-top:5px;">
-            (Data akan terbuka setelah verifikasi PIN dari Cloudflare)
-        </p>
-    </div>
+            <section class="section" id="data-pribadi">
+                <h2 class="section-title">👤 Data Pribadi</h2>
+                <table class="info-table" id="personalDataTable">
+                    <tr>
+                        <td>a. Nama Lengkap</td>
+                        <td id="val-fullname">: Yudi Dwiranto</td>
+                    </tr>
+                    
+                    <!-- DATA SENSITIF: Alamat -->
+                    <tr class="sensitive-row" data-field="alamat">
+                        <td>b. Alamat</td>
+                        <td>
+                            <span class="web-placeholder" id="addr-placeholder">🔒 Data sensitif terkunci</span>
+                            <span class="print-data" id="val-address" style="display:none;"></span>
+                        </td>
+                    </tr>
+                    
+                    <!-- DATA SENSITIF: Email -->
+                    <tr class="sensitive-row" data-field="email">
+                        <td>c. Alamat E-mail</td>
+                        <td>
+                            <span class="web-placeholder" id="email-placeholder">🔒 Data sensitif terkunci</span>
+                            <span class="print-data" id="val-email" style="display:none;"></span>
+                        </td>
+                    </tr>
+                    
+                    <!-- DATA NON-SENSITIF -->
+                    <tr>
+                        <td>d. Golongan Darah</td>
+                        <td id="val-bloodtype">: O</td>
+                    </tr>
+                    
+                    <!-- DATA SENSITIF: No HP -->
+                    <tr class="sensitive-row" data-field="nohp">
+                        <td>e. No. HP</td>
+                        <td>
+                            <span class="web-placeholder" id="phone-placeholder">🔒 Data sensitif terkunci</span>
+                            <span class="print-data" id="val-phone" style="display:none;"></span>
+                        </td>
+                    </tr>
+                    
+                    <!-- DATA SENSITIF: Tanggal Lahir -->
+                    <tr class="sensitive-row" data-field="ttl">
+                        <td>f. Tanggal Lahir</td>
+                        <td>
+                            <span class="web-placeholder" id="birth-placeholder">🔒 Data sensitif terkunci</span>
+                            <span class="print-data" id="val-birthdate" style="display:none;"></span>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>g. Agama</td>
+                        <td id="val-religion">: Islam</td>
+                    </tr>
+                </table>
+                
+                <!-- Tombol Buka Data Sensitif -->
+                <div style="margin-top:15px; text-align:center;" class="web-only">
+                    <button id="btn-unlock" class="unlock-btn" onclick="openPinModal()">
+                        🔓 Buka Data Sensitif dengan PIN
+                    </button>
+                    <p style="font-size:11px; color:#888; margin-top:5px;">
+                        (Data akan terbuka setelah verifikasi PIN dari Cloudflare)
+                    </p>
+                </div>
 
-    <div class="privacy-notice web-only">
-        <p>ℹ️ <strong>Catatan Privasi:</strong> Data sensitif disembunyikan untuk keamanan. Data lengkap hanya muncul saat mencetak/PDF.</p>
-    </div>
-</section>
+                <!-- Notifikasi Privasi -->
+                <div class="privacy-notice web-only">
+                    <p>ℹ️ <strong>Catatan Privasi:</strong> Data sensitif disembunyikan untuk keamanan. Data lengkap hanya muncul saat mencetak/PDF.</p>
+                </div>
+            </section>
+
             <!-- 3. PENDIDIKAN -->
-            <!-- 3. PENDIDIKAN (DENGAN LOGO & LINK) -->
-<section class="section" id="pendidikan">
-    <h2 class="section-title">🎓 Pendidikan</h2>
-    
-    <!-- a. SD -->
-    <div class="education-item">
-        <div class="edu-info">
-            <span class="edu-label">a. SD</span>
-            <span class="edu-detail">: [Nama SD] — [Tahun Masuk] s/d [Tahun Lulus]</span>
-        </div>
-        <a href="https://www.sekolah-sd-anda.sch.id" 
-           target="_blank" 
-           rel="noopener noreferrer" 
-           class="edu-logo-link"
-           title="Kunjungi Website [Nama SD]">
-            <img src="assets/logo/logo-sd.png" 
-                 alt="Logo [Nama SD]" 
-                 class="edu-logo"
-                 onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\\'logo-fallback\\'>🏫</span>';">
-        </a>
-    </div>
-    
-    <!-- b. SMP -->
-    <div class="education-item">
-        <div class="edu-info">
-            <span class="edu-label">b. SMP</span>
-            <span class="edu-detail">: [Nama SMP] — [Tahun Masuk] s/d [Tahun Lulus]</span>
-        </div>
-        <a href="https://www.sekolah-smp-anda.sch.id" 
-           target="_blank" 
-           rel="noopener noreferrer" 
-           class="edu-logo-link"
-           title="Kunjungi Website [Nama SMP]">
-            <img src="assets/logo/logo-smp.png" 
-                 alt="Logo [Nama SMP]" 
-                 class="edu-logo"
-                 onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\\'logo-fallback\\'>🏫</span>';">
-        </a>
-    </div>
-    
-    <!-- c. SMU -->
-    <div class="education-item">
-        <div class="edu-info">
-            <span class="edu-label">c. SMU</span>
-            <span class="edu-detail">: [Nama SMU] — [Tahun Masuk] s/d [Tahun Lulus]</span>
-        </div>
-        <a href="https://www.sekolah-smu-anda.sch.id" 
-           target="_blank" 
-           rel="noopener noreferrer" 
-           class="edu-logo-link"
-           title="Kunjungi Website [Nama SMU]">
-            <img src="assets/logo/logo-smu.png" 
-                 alt="Logo [Nama SMU]" 
-                 class="edu-logo"
-                 onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\\'logo-fallback\\'>🏫</span>';">
-        </a>
-    </div>
-    
-    <!-- d. Diploma -->
-    <div class="education-item">
-        <div class="edu-info">
-            <span class="edu-label">d. Diploma</span>
-            <span class="edu-detail">: [Nama Institusi, Jurusan] — [Tahun Masuk] s/d [Tahun Lulus]</span>
-        </div>
-        <a href="https://www.kampus-anda.ac.id" 
-           target="_blank" 
-           rel="noopener noreferrer" 
-           class="edu-logo-link"
-           title="Kunjungi Website [Nama Institusi]">
-            <img src="assets/logo/logo-diploma.png" 
-                 alt="Logo [Nama Institusi]" 
-                 class="edu-logo"
-                 onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\\'logo-fallback\\'>🎓</span>';">
-        </a>
-    </div>
-</section>
+            <section class="section" id="pendidikan">
+                <h2 class="section-title">🎓 Pendidikan</h2>
+                
+                <!-- a. SD -->
+                <div class="education-item">
+                    <div class="edu-info">
+                        <span class="edu-label">a. SD</span>
+                        <span class="edu-detail">: [Nama SD] — [Tahun Masuk] s/d [Tahun Lulus]</span>
+                    </div>
+                    <a href="#" class="edu-logo-link" title="Kunjungi Website [Nama SD]">
+                        <img src="assets/logo/logo-sd.png" 
+                             alt="Logo [Nama SD]" 
+                             class="edu-logo"
+                             onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\\'logo-fallback\\'>🏫</span>';">
+                    </a>
+                </div>
+                
+                <!-- b. SMP -->
+                <div class="education-item">
+                    <div class="edu-info">
+                        <span class="edu-label">b. SMP</span>
+                        <span class="edu-detail">: [Nama SMP] — [Tahun Masuk] s/d [Tahun Lulus]</span>
+                    </div>
+                    <a href="#" class="edu-logo-link" title="Kunjungi Website [Nama SMP]">
+                        <img src="assets/logo/logo-smp.png" 
+                             alt="Logo [Nama SMP]" 
+                             class="edu-logo"
+                             onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\\'logo-fallback\\'>🏫</span>';">
+                    </a>
+                </div>
+                
+                <!-- c. SMU -->
+                <div class="education-item">
+                    <div class="edu-info">
+                        <span class="edu-label">c. SMU</span>
+                        <span class="edu-detail">: [Nama SMU] — [Tahun Masuk] s/d [Tahun Lulus]</span>
+                    </div>
+                    <a href="#" class="edu-logo-link" title="Kunjungi Website [Nama SMU]">
+                        <img src="assets/logo/logo-smu.png" 
+                             alt="Logo [Nama SMU]" 
+                             class="edu-logo"
+                             onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\\'logo-fallback\\'>🏫</span>';">
+                    </a>
+                </div>
+                
+                <!-- d. Diploma -->
+                <div class="education-item">
+                    <div class="edu-info">
+                        <span class="edu-label">d. Diploma</span>
+                        <span class="edu-detail">: [Nama Institusi, Jurusan] — [Tahun Masuk] s/d [Tahun Lulus]</span>
+                    </div>
+                    <a href="#" class="edu-logo-link" title="Kunjungi Website [Nama Institusi]">
+                        <img src="assets/logo/logo-diploma.png" 
+                             alt="Logo [Nama Institusi]" 
+                             class="edu-logo"
+                             onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\\'logo-fallback\\'>🎓</span>';">
+                    </a>
+                </div>
+            </section>
+
             <!-- 4. PENGALAMAN BEKERJA -->
-            <!-- 4. PENGALAMAN BEKERJA (DENGAN LOGO & LINK) -->
-<section class="section" id="pengalaman">
-    <h2 class="section-title">💼 Pengalaman Bekerja</h2>
+            <section class="section" id="pengalaman">
+                <h2 class="section-title">💼 Pengalaman Bekerja</h2>
 
-    <!-- A. PT Sanjaya Tama Lestari -->
-    <div class="experience-item">
-        <div class="experience-header">
-            <div class="experience-title">
-                <h3>A. PT. Sanjaya Tama Lestari</h3>
-                <p class="role">SPB (Sales Promotion Boy)</p>
-            </div>
-            <a href="https://www.sanjayatama.co.id" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               class="company-logo-link"
-               title="Kunjungi Website PT. Sanjaya Tama Lestari">
-                <img src="assets/logo/logo-sanjaya-tama.png" 
-                     alt="Logo PT. Sanjaya Tama Lestari" 
-                     class="company-logo"
-                     onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\\'logo-fallback\\'>🏢</span>';">
-            </a>
-        </div>
-        <div class="definition">
-            <strong>Definisi:</strong> SPB adalah tenaga pemasaran yang bertugas di area penjualan untuk mempromosikan dan menawarkan produk langsung kepada pelanggan.
-        </div>
-        <ul>
-            <li>Memajang produk sesuai standar visual perusahaan</li>
-            <li>Menjelaskan fitur dan manfaat produk kepada pelanggan</li>
-            <li>Mencatat stok dan memastikan ketersediaan barang</li>
-            <li>Mencapai target penjualan harian dan mingguan</li>
-            <li>Melaporkan hasil aktivitas promosi kepada supervisor</li>
-        </ul>
-    </div>
+                <!-- A. PT Sanjaya Tama Lestari -->
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="experience-title">
+                            <h3>A. PT. Sanjaya Tama Lestari</h3>
+                            <p class="role">SPB (Sales Promotion Boy)</p>
+                        </div>
+                        <a href="#" class="company-logo-link" title="Kunjungi Website PT. Sanjaya Tama Lestari">
+                            <img src="assets/logo/logo-sanjaya-tama.png" 
+                                 alt="Logo PT. Sanjaya Tama Lestari" 
+                                 class="company-logo"
+                                 onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\\'logo-fallback\\'>🏢</span>';">
+                        </a>
+                    </div>
+                    <div class="definition">
+                        <strong>Definisi:</strong> SPB adalah tenaga pemasaran yang bertugas di area penjualan untuk mempromosikan dan menawarkan produk langsung kepada pelanggan.
+                    </div>
+                    <ul>
+                        <li>Memajang produk sesuai standar visual perusahaan</li>
+                        <li>Menjelaskan fitur dan manfaat produk kepada pelanggan</li>
+                        <li>Mencatat stok dan memastikan ketersediaan barang</li>
+                        <li>Mencapai target penjualan harian dan mingguan</li>
+                        <li>Melaporkan hasil aktivitas promosi kepada supervisor</li>
+                    </ul>
+                </div>
 
-    <!-- B. PT Putra Serasi Pioneerindo / TOPS -->
-    <div class="experience-item">
-        <div class="experience-header">
-            <div class="experience-title">
-                <h3>B. PT. Putra Serasi Pioneerindo / TOPS</h3>
-                <p class="role">Butcher</p>
-            </div>
-            <a href="https://www.tops.co.id" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               class="company-logo-link"
-               title="Kunjungi Website TOPS">
-                <img src="assets/logo/logo-tops.png" 
-                     alt="Logo TOPS" 
-                     class="company-logo"
-                     onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\\'logo-fallback\\'>🏢</span>';">
-            </a>
-        </div>
-        <div class="definition">
-            <strong>Definisi:</strong> Butcher adalah tenaga profesional yang bertanggung jawab menangani daging segar, mulai dari pemotongan, pemilahan, hingga pengemasan sesuai standar komersial.
-        </div>
-        <ul>
-            <li>Memotong dan mengiris daging sesuai standar komersial</li>
-            <li>Memisahkan daging berdasarkan grade dan jenis</li>
-            <li>Menjaga kualitas, kesegaran, dan kebersihan area kerja</li>
-            <li>Menimbang, memberi label harga, dan memajang daging di etalase</li>
-            <li>Memastikan kepatuhan terhadap standar keamanan pangan (HACCP)</li>
-        </ul>
-    </div>
+                <!-- B. PT Putra Serasi Pioneerindo / TOPS -->
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="experience-title">
+                            <h3>B. PT. Putra Serasi Pioneerindo / TOPS</h3>
+                            <p class="role">Butcher</p>
+                        </div>
+                        <a href="#" class="company-logo-link" title="Kunjungi Website TOPS">
+                            <img src="assets/logo/logo-tops.png" 
+                                 alt="Logo TOPS" 
+                                 class="company-logo"
+                                 onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\\'logo-fallback\\'>🏢</span>';">
+                        </a>
+                    </div>
+                    <div class="definition">
+                        <strong>Definisi:</strong> Butcher adalah tenaga profesional yang bertanggung jawab menangani daging segar, mulai dari pemotongan, pemilahan, hingga pengemasan sesuai standar komersial.
+                    </div>
+                    <ul>
+                        <li>Memotong dan mengiris daging sesuai standar komersial</li>
+                        <li>Memisahkan daging berdasarkan grade dan jenis</li>
+                        <li>Menjaga kualitas, kesegaran, dan kebersihan area kerja</li>
+                        <li>Menimbang, memberi label harga, dan memajang daging di etalase</li>
+                        <li>Memastikan kepatuhan terhadap standar keamanan pangan (HACCP)</li>
+                    </ul>
+                </div>
 
-    <!-- C. PT Hero Supermarket Tbk -->
-    <div class="experience-item">
-        <div class="experience-header">
-            <div class="experience-title">
-                <h3>C. PT. Hero Supermarket Tbk.</h3>
-            </div>
-            <a href="https://www.hero.co.id" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               class="company-logo-link"
-               title="Kunjungi Website PT. Hero Supermarket Tbk.">
-                <img src="assets/logo/logo-hero.png" 
-                     alt="Logo Hero Supermarket" 
-                     class="company-logo"
-                     onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\\'logo-fallback\\'>🏢</span>';">
-            </a>
-        </div>
-        
-        <p class="role" style="margin-top:10px;">C.1 Staff Administrasi & Data Entry</p>
-        <div class="definition">
-            <strong>Definisi:</strong> Posisi yang bertanggung jawab dalam pengelolaan dokumen administratif dan input data secara akurat ke dalam sistem perusahaan.
-        </div>
-        <ul>
-            <li>Memasukkan data penjualan, inventori, dan faktur ke sistem</li>
-            <li>Memverifikasi keakuratan data sebelum diproses</li>
-            <li>Mengarsip dokumen fisik dan digital secara sistematis</li>
-            <li>Menyusun laporan harian dan mingguan untuk manajemen</li>
-        </ul>
+                <!-- C. PT Hero Supermarket Tbk -->
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="experience-title">
+                            <h3>C. PT. Hero Supermarket Tbk.</h3>
+                        </div>
+                        <a href="#" class="company-logo-link" title="Kunjungi Website PT. Hero Supermarket Tbk.">
+                            <img src="assets/logo/logo-hero.png" 
+                                 alt="Logo Hero Supermarket" 
+                                 class="company-logo"
+                                 onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\\'logo-fallback\\'>🏢</span>';">
+                        </a>
+                    </div>
+                    
+                    <p class="role" style="margin-top:10px;">C.1 Staff Administrasi & Data Entry</p>
+                    <div class="definition">
+                        <strong>Definisi:</strong> Posisi yang bertanggung jawab dalam pengelolaan dokumen administratif dan input data secara akurat ke dalam sistem perusahaan.
+                    </div>
+                    <ul>
+                        <li>Memasukkan data penjualan, inventori, dan faktur ke sistem</li>
+                        <li>Memverifikasi keakuratan data sebelum diproses</li>
+                        <li>Mengarsip dokumen fisik dan digital secara sistematis</li>
+                        <li>Menyusun laporan harian dan mingguan untuk manajemen</li>
+                    </ul>
 
-        <p class="role" style="margin-top:10px;">C.2 Staff Butcher</p>
-        <div class="definition">
-            <strong>Definisi:</strong> Tenaga ahli daging yang bertugas memastikan kualitas dan tampilan produk daging di gerai ritel.
-        </div>
-        <ul>
-            <li>Melakukan pemotongan daging sesuai permintaan pelanggan</li>
-            <li>Menjaga kebersihan dan sanitasi area kerja</li>
-            <li>Melakukan quality control terhadap produk daging</li>
-            <li>Menyusun display daging di showcase pendingin</li>
-        </ul>
+                    <p class="role" style="margin-top:10px;">C.2 Staff Butcher</p>
+                    <div class="definition">
+                        <strong>Definisi:</strong> Tenaga ahli daging yang bertugas memastikan kualitas dan tampilan produk daging di gerai ritel.
+                    </div>
+                    <ul>
+                        <li>Melakukan pemotongan daging sesuai permintaan pelanggan</li>
+                        <li>Menjaga kebersihan dan sanitasi area kerja</li>
+                        <li>Melakukan quality control terhadap produk daging</li>
+                        <li>Menyusun display daging di showcase pendingin</li>
+                    </ul>
 
-        <p class="role" style="margin-top:10px;">C.3 Staff Produce</p>
-        <div class="definition">
-            <strong>Definisi:</strong> Staff Produce bertanggung jawab atas penanganan dan perawatan produk buah dan sayur segar.
-        </div>
-        <ul>
-            <li>Menyeleksi dan memilah produk segar sesuai grade</li>
-            <li>Menyusun dan merotasi display sesuai FIFO (First In First Out)</li>
-            <li>Memonitor suhu penyimpanan dan kesegaran produk</li>
-            <li>Mengidentifikasi dan memisahkan produk yang tidak layak jual</li>
-        </ul>
+                    <p class="role" style="margin-top:10px;">C.3 Staff Produce</p>
+                    <div class="definition">
+                        <strong>Definisi:</strong> Staff Produce bertanggung jawab atas penanganan dan perawatan produk buah dan sayur segar.
+                    </div>
+                    <ul>
+                        <li>Menyeleksi dan memilah produk segar sesuai grade</li>
+                        <li>Menyusun dan merotasi display sesuai FIFO (First In First Out)</li>
+                        <li>Memonitor suhu penyimpanan dan kesegaran produk</li>
+                        <li>Mengidentifikasi dan memisahkan produk yang tidak layak jual</li>
+                    </ul>
 
-        <p class="role" style="margin-top:10px;">C.4 Staff Daily Dairy</p>
-        <div class="definition">
-            <strong>Definisi:</strong> Staff Daily Dairy adalah personel yang menangani produk susu dan turunannya (yogurt, keju, mentega) di area pendingin.
-        </div>
-        <ul>
-            <li>Memastikan ketersediaan dan kelengkapan produk susu harian</li>
-            <li>Memeriksa tanggal kedaluwarsa dan melakukan rotasi stok</li>
-            <li>Menjaga kebersihan rak dan area pendingin</li>
-            <li>Menerima dan memeriksa kiriman produk susu dari pemasok</li>
-        </ul>
-    </div>
+                    <p class="role" style="margin-top:10px;">C.4 Staff Daily Dairy</p>
+                    <div class="definition">
+                        <strong>Definisi:</strong> Staff Daily Dairy adalah personel yang menangani produk susu dan turunannya (yogurt, keju, mentega) di area pendingin.
+                    </div>
+                    <ul>
+                        <li>Memastikan ketersediaan dan kelengkapan produk susu harian</li>
+                        <li>Memeriksa tanggal kedaluwarsa dan melakukan rotasi stok</li>
+                        <li>Menjaga kebersihan rak dan area pendingin</li>
+                        <li>Menerima dan memeriksa kiriman produk susu dari pemasok</li>
+                    </ul>
+                </div>
 
-    <!-- D. TOSAMA -->
-    <div class="experience-item">
-        <div class="experience-header">
-            <div class="experience-title">
-                <h3>D. TOSAMA (Toko Sayur Mayur)</h3>
-            </div>
-            <a href="https://www.tosama.co.id" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               class="company-logo-link"
-               title="Kunjungi Website TOSAMA">
-                <img src="assets/logo/logo-tosama.png" 
-                     alt="Logo TOSAMA" 
-                     class="company-logo"
-                     onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\\'logo-fallback\\'>🏢</span>';">
-            </a>
-        </div>
-        
-        <p class="role" style="margin-top:10px;">D.1 Kepala Toko</p>
-        <div class="definition">
-            <strong>Definisi:</strong> Kepala Toko adalah pimpinan operasional yang bertanggung jawab penuh atas kinerja dan pengelolaan satu unit toko secara keseluruhan.
-        </div>
-        <ul>
-            <li>Memimpin dan mengawasi seluruh staff toko</li>
-            <li>Menyusun jadwal kerja dan pembagian tugas</li>
-            <li>Mengelola stok dan melakukan pemesanan barang</li>
-            <li>Menganalisis pencapaian target penjualan</li>
-            <li>Menangani keluhan pelanggan dan memastikan service excellence</li>
-        </ul>
+                <!-- D. TOSAMA -->
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="experience-title">
+                            <h3>D. TOSAMA (Toko Sayur Mayur)</h3>
+                        </div>
+                        <a href="#" class="company-logo-link" title="Kunjungi Website TOSAMA">
+                            <img src="assets/logo/logo-tosama.png" 
+                                 alt="Logo TOSAMA" 
+                                 class="company-logo"
+                                 onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\\'logo-fallback\\'>🏢</span>';">
+                        </a>
+                    </div>
+                    
+                    <p class="role" style="margin-top:10px;">D.1 Kepala Toko</p>
+                    <div class="definition">
+                        <strong>Definisi:</strong> Kepala Toko adalah pimpinan operasional yang bertanggung jawab penuh atas kinerja dan pengelolaan satu unit toko secara keseluruhan.
+                    </div>
+                    <ul>
+                        <li>Memimpin dan mengawasi seluruh staff toko</li>
+                        <li>Menyusun jadwal kerja dan pembagian tugas</li>
+                        <li>Mengelola stok dan melakukan pemesanan barang</li>
+                        <li>Menganalisis pencapaian target penjualan</li>
+                        <li>Menangani keluhan pelanggan dan memastikan service excellence</li>
+                    </ul>
 
-        <p class="role" style="margin-top:10px;">D.2 Staff Admin DC (Distribution Center)</p>
-        <div class="definition">
-            <strong>Definisi:</strong> Staff Admin DC adalah personel administrasi yang mendukung operasional pusat distribusi barang.
-        </div>
-        <ul>
-            <li>Mencatat dan menginput data barang masuk dan keluar</li>
-            <li>Memproses dokumen pengiriman dan penerimaan</li>
-            <li>Mengkoordinasikan jadwal distribusi dengan toko tujuan</li>
-            <li>Memonitor stok di gudang distribusi</li>
-            <li>Melakukan rekonsiliasi data inventori secara berkala</li>
-        </ul>
-    </div>
+                    <p class="role" style="margin-top:10px;">D.2 Staff Admin DC (Distribution Center)</p>
+                    <div class="definition">
+                        <strong>Definisi:</strong> Staff Admin DC adalah personel administrasi yang mendukung operasional pusat distribusi barang.
+                    </div>
+                    <ul>
+                        <li>Mencatat dan menginput data barang masuk dan keluar</li>
+                        <li>Memproses dokumen pengiriman dan penerimaan</li>
+                        <li>Mengkoordinasikan jadwal distribusi dengan toko tujuan</li>
+                        <li>Memonitor stok di gudang distribusi</li>
+                        <li>Melakukan rekonsiliasi data inventori secara berkala</li>
+                    </ul>
+                </div>
 
-    <!-- E. AmandaMart -->
-    <div class="experience-item">
-        <div class="experience-header">
-            <div class="experience-title">
-                <h3>E. AmandaMart</h3>
-                <p class="role">Kepala Toko Midi Market</p>
-            </div>
-            <a href="https://www.amandamart.co.id" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               class="company-logo-link"
-               title="Kunjungi Website AmandaMart">
-                <img src="assets/logo/logo-amandamart.png" 
-                     alt="Logo AmandaMart" 
-                     class="company-logo"
-                     onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\\'logo-fallback\\'>🏢</span>';">
-            </a>
-        </div>
-        <div class="definition">
-            <strong>Definisi:</strong> Kepala Toko Midi Market adalah manajer operasional yang bertanggung jawab mengelola toko format menengah (midi) secara menyeluruh.
-        </div>
-        <ul>
-            <li>Mengawasi operasional harian dan seluruh karyawan</li>
-            <li>Menyusun strategi peningkatan penjualan</li>
-            <li>Mengontrol biaya operasional dan cash flow toko</li>
-            <li>Memastikan implementasi SOP perusahaan berjalan efektif</li>
-            <li>Melaporkan performa toko kepada area manager</li>
-        </ul>
-    </div>
-</section>
+                <!-- E. AmandaMart -->
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="experience-title">
+                            <h3>E. AmandaMart</h3>
+                            <p class="role">Kepala Toko Midi Market</p>
+                        </div>
+                        <a href="#" class="company-logo-link" title="Kunjungi Website AmandaMart">
+                            <img src="assets/logo/logo-amandamart.png" 
+                                 alt="Logo AmandaMart" 
+                                 class="company-logo"
+                                 onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\\'logo-fallback\\'>🏢</span>';">
+                        </a>
+                    </div>
+                    <div class="definition">
+                        <strong>Definisi:</strong> Kepala Toko Midi Market adalah manajer operasional yang bertanggung jawab mengelola toko format menengah (midi) secara menyeluruh.
+                    </div>
+                    <ul>
+                        <li>Mengawasi operasional harian dan seluruh karyawan</li>
+                        <li>Menyusun strategi peningkatan penjualan</li>
+                        <li>Mengontrol biaya operasional dan cash flow toko</li>
+                        <li>Memastikan implementasi SOP perusahaan berjalan efektif</li>
+                        <li>Melaporkan performa toko kepada area manager</li>
+                    </ul>
+                </div>
+            </section>
 
             <!-- 5. KEAHLIAN -->
             <section class="section" id="keahlian">
@@ -426,9 +402,9 @@
                 </div>
             </section>
 
-            <!-- 6. KELENGKAPAN DATA -->
+            <!-- 6. GALERI KEGIATAN -->
             <section class="section" id="galeri">
-                <h2 class="section-title">📸 Kelengkapan Data</h2>
+                <h2 class="section-title">📸 Galeri Kegiatan</h2>
                 <div class="gallery-grid">
                     <!-- Baris 1 -->
                     <div class="gallery-item">
@@ -469,6 +445,28 @@
                         <div class="gallery-img"><img src="assets/gallery/kegiatan-09.jpg" alt="Kegiatan 9"></div>
                         <div class="gallery-caption">[Nama Kegiatan 9]</div>
                     </div>
+                    <!-- Baris 4 -->
+                    <div class="gallery-item">
+                        <div class="gallery-img"><img src="assets/gallery/kegiatan-10.jpg" alt="Kegiatan 10"></div>
+                        <div class="gallery-caption">[Nama Kegiatan 10]</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-img"><img src="assets/gallery/kegiatan-11.jpg" alt="Kegiatan 11"></div>
+                        <div class="gallery-caption">[Nama Kegiatan 11]</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-img"><img src="assets/gallery/kegiatan-12.jpg" alt="Kegiatan 12"></div>
+                        <div class="gallery-caption">[Nama Kegiatan 12]</div>
+                    </div>
+                    <!-- Baris 5 -->
+                    <div class="gallery-item">
+                        <div class="gallery-img"><img src="assets/gallery/kegiatan-13.jpg" alt="Kegiatan 13"></div>
+                        <div class="gallery-caption">[Nama Kegiatan 13]</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-img"><img src="assets/gallery/kegiatan-14.jpg" alt="Kegiatan 14"></div>
+                        <div class="gallery-caption">[Nama Kegiatan 14]</div>
+                    </div>
                     <div class="gallery-item">
                         <div class="gallery-img"><img src="assets/gallery/kegiatan-15.jpg" alt="Kegiatan 15"></div>
                         <div class="gallery-caption">[Nama Kegiatan 15]</div>
@@ -480,29 +478,30 @@
         
         <!-- Footer dengan copyright -->
         <footer class="footer web-only">
-            <p>&copy; 2026 [Yudi Dwiranto] — CV Portofolio Online</p>
+            <p>&copy; 2026 Yudi Dwiranto — CV Portofolio Online</p>
         </footer>
+    </div>
+
+    <!-- ================= MODAL PIN ================= -->
+    <div id="pin-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>🔐 Verifikasi PIN</h3>
+                <button class="modal-close" onclick="closePinModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Masukkan PIN untuk membuka data sensitif:</p>
+                <input type="password" id="input-pin" placeholder="Masukkan PIN" maxlength="6" autofocus>
+                <div id="modal-error" class="modal-error"></div>
+                <div class="modal-actions">
+                    <button class="btn-primary" onclick="submitPin()">Verifikasi</button>
+                    <button class="btn-secondary" onclick="closePinModal()">Batal</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- External JavaScript -->
     <script src="js/script.js"></script>
-    <!-- ================= MODAL PIN ================= -->
-<div id="pin-modal" class="modal" style="display:none;">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h3>🔐 Verifikasi PIN</h3>
-            <button class="modal-close" onclick="closePinModal()">&times;</button>
-        </div>
-        <div class="modal-body">
-            <p>Masukkan PIN untuk membuka data sensitif:</p>
-            <input type="password" id="input-pin" placeholder="Masukkan PIN" maxlength="6" autofocus>
-            <div id="modal-error" class="modal-error"></div>
-            <div class="modal-actions">
-                <button class="btn-primary" onclick="submitPin()">Verifikasi</button>
-                <button class="btn-secondary" onclick="closePinModal()">Batal</button>
-            </div>
-        </div>
-    </div>
-</div>
 </body>
 </html>
