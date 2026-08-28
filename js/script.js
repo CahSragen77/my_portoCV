@@ -1,29 +1,55 @@
-// Real-time Clock Function
+// ============================================
+// REAL-TIME CLOCK (Diperbaiki ID-nya)
+// ============================================
 function updateClock() {
     const now = new Date();
     const timeStr = now.toLocaleTimeString('id-ID', { hour12: false });
-    const dateStr = now.toLocaleDateString('id-ID', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+    const dateStr = now.toLocaleDateString('id-ID', { 
+        weekday: 'long', 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric' 
+    });
     
-    document.getElementById('live-time').textContent = timeStr;
-    document.getElementById('live-date').textContent = dateStr;
+    // PERBAIKAN: Gunakan ID yang benar dari HTML
+    const clockEl = document.getElementById('live-clock');
+    const dateEl = document.getElementById('live-date');
+    
+    if (clockEl) clockEl.textContent = timeStr;
+    if (dateEl) dateEl.textContent = dateStr;
 }
 
+// Jalankan clock
 setInterval(updateClock, 1000);
 updateClock();
 
-// Modal Handlers
+// ============================================
+// MODAL PIN HANDLER
+// ============================================
 function openPinModal() {
-    document.getElementById('pin-modal').style.display = 'flex';
-    document.getElementById('input-pin').focus();
+    const modal = document.getElementById('pin-modal');
+    if (modal) {
+        modal.style.display = 'flex';
+        const input = document.getElementById('input-pin');
+        if (input) {
+            input.value = '';
+            input.focus();
+        }
+        const errorEl = document.getElementById('modal-error');
+        if (errorEl) errorEl.textContent = '';
+    }
 }
 
 function closePinModal() {
-    document.getElementById('pin-modal').style.display = 'none';
-    document.getElementById('modal-error').textContent = '';
-    document.getElementById('input-pin').value = '';
+    const modal = document.getElementById('pin-modal');
+    if (modal) modal.style.display = 'none';
+    const errorEl = document.getElementById('modal-error');
+    if (errorEl) errorEl.textContent = '';
 }
 
-// Fetch Sensitive Data from Cloudflare Pages Function
+// ============================================
+// SUBMIT PIN - FETCH DATA DARI CLOUDFLARE
+// ============================================
 async function submitPin() {
     const pinVal = document.getElementById('input-pin').value;
     const errorEl = document.getElementById('modal-error');
@@ -33,7 +59,8 @@ async function submitPin() {
         return;
     }
 
-    errorEl.textContent = 'Memverifikasi ke Cloudflare...';
+    errorEl.textContent = '⏳ Memverifikasi ke Cloudflare...';
+    errorEl.style.color = '#856404';
 
     try {
         const response = await fetch('/api/get-cv-data', {
@@ -45,27 +72,82 @@ async function submitPin() {
         const result = await response.json();
 
         if (result.success) {
-            // Dekripsi tampilan
-            document.getElementById('val-email').textContent = result.data.email;
-            document.getElementById('val-email').classList.remove('sensitive-blur');
-
-            document.getElementById('val-phone').textContent = result.data.phone;
-            document.getElementById('val-phone').classList.remove('sensitive-blur');
-
-            document.getElementById('val-birthdate').textContent = result.data.birthdate;
-            document.getElementById('val-birthdate').classList.remove('sensitive-blur');
-
-            document.getElementById('val-address').textContent = result.data.address;
-            document.getElementById('val-address').classList.remove('sensitive-blur');
-
-            // Sembunyikan Tombol
-            document.getElementById('btn-unlock').style.display = 'none';
-
+            // === TAMPILKAN DATA DI TABEL ===
+            const data = result.data;
+            
+            // Email
+            const emailEl = document.getElementById('val-email');
+            const emailPlaceholder = document.getElementById('email-placeholder');
+            if (emailEl) {
+                emailEl.textContent = data.email || 'Data tidak tersedia';
+                emailEl.style.display = 'inline';
+            }
+            if (emailPlaceholder) emailPlaceholder.style.display = 'none';
+            
+            // Phone
+            const phoneEl = document.getElementById('val-phone');
+            const phonePlaceholder = document.getElementById('phone-placeholder');
+            if (phoneEl) {
+                phoneEl.textContent = data.phone || 'Data tidak tersedia';
+                phoneEl.style.display = 'inline';
+            }
+            if (phonePlaceholder) phonePlaceholder.style.display = 'none';
+            
+            // Birthdate
+            const birthEl = document.getElementById('val-birthdate');
+            const birthPlaceholder = document.getElementById('birth-placeholder');
+            if (birthEl) {
+                birthEl.textContent = data.birthdate || 'Data tidak tersedia';
+                birthEl.style.display = 'inline';
+            }
+            if (birthPlaceholder) birthPlaceholder.style.display = 'none';
+            
+            // Address
+            const addrEl = document.getElementById('val-address');
+            const addrPlaceholder = document.getElementById('addr-placeholder');
+            if (addrEl) {
+                addrEl.textContent = data.address || 'Data tidak tersedia';
+                addrEl.style.display = 'inline';
+            }
+            if (addrPlaceholder) addrPlaceholder.style.display = 'none';
+            
+            // Sembunyikan tombol unlock
+            const btnUnlock = document.getElementById('btn-unlock');
+            if (btnUnlock) btnUnlock.style.display = 'none';
+            
+            // Tutup modal
             closePinModal();
+            
+            // Tampilkan notifikasi sukses
+            alert('✅ Data sensitif berhasil dibuka!');
         } else {
-            errorEl.textContent = result.message || 'PIN Salah!';
+            errorEl.textContent = '❌ ' + (result.message || 'PIN Salah!');
+            errorEl.style.color = '#dc3545';
         }
     } catch (err) {
-        errorEl.textContent = 'Gagal terhubung ke Cloudflare Edge.';
+        errorEl.textContent = '❌ Gagal terhubung ke Cloudflare. Coba lagi.';
+        errorEl.style.color = '#dc3545';
+        console.error('Fetch error:', err);
     }
 }
+
+// ============================================
+// HANDLER UNTUK TOMBOL UNLOCK DI TABEL
+// ============================================
+document.addEventListener('DOMContentLoaded', function() {
+    // Pastikan tombol unlock terhubung
+    const unlockBtn = document.getElementById('btn-unlock');
+    if (unlockBtn) {
+        unlockBtn.addEventListener('click', openPinModal);
+    }
+    
+    // Enter key di input PIN
+    const pinInput = document.getElementById('input-pin');
+    if (pinInput) {
+        pinInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                submitPin();
+            }
+        });
+    }
+});
