@@ -655,13 +655,44 @@ body {
 }
 
 /* ============================================
-   PRINT STYLES
+   PRINT STYLES (SAMA PERSIS DENGAN WEB)
    ============================================ */
 @media print {
-    .web-placeholder {
+    /* === RESET & PAGE SETUP === */
+    @page {
+        size: A4 portrait;
+        margin: 0;
+    }
+    
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        color-adjust: exact !important;
+    }
+    
+    body {
+        background-color: white !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        font-size: 11pt;
+    }
+    
+    .container {
+        max-width: 100% !important;
+        margin: 0 !important;
+        box-shadow: none !important;
+    }
+    
+    /* === SEMBUNYIKAN ELEMEN WEB-ONLY === */
+    .web-placeholder,
+    .privacy-notice,
+    .web-only,
+    .print-btn,
+    .unlock-btn {
         display: none !important;
     }
     
+    /* === TAMPILKAN DATA SENSITIF === */
     .print-data {
         display: inline !important;
         color: var(--dark-gray) !important;
@@ -672,106 +703,254 @@ body {
         border: none !important;
     }
     
-    .privacy-notice,
-    .web-only {
-        display: none !important;
+    /* === HEADER: PAKSA GRID 3 KOLOM === */
+    .header {
+        display: grid !important;
+        grid-template-columns: 130px 1fr 180px !important;
+        align-items: center !important;
+        padding: 20px 25px !important;
+        gap: 15px !important;
+        background-color: var(--navy) !important;
+        color: var(--white) !important;
+        page-break-inside: avoid !important;
+        page-break-after: avoid !important;
     }
     
-    .header {
-        background-color: var(--navy) !important;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
+    .header-left {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    
+    .photo-placeholder {
+        width: 110px !important;
+        height: 110px !important;
+        border-radius: 50% !important;
+        border: 3px solid var(--white) !important;
+        overflow: hidden !important;
+    }
+    
+    .photo-placeholder img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        border-radius: 50% !important;
+    }
+    
+    .header-center {
+        text-align: left !important;
+        padding-left: 10px !important;
+    }
+    
+    .header-center h1 {
+        font-size: 22pt !important;
+        margin-bottom: 4px !important;
+        letter-spacing: 1px !important;
+        color: var(--white) !important;
+    }
+    
+    .header-center .subtitle {
+        font-size: 10pt !important;
+        color: var(--gold) !important;
+        font-style: italic !important;
+    }
+    
+    .header-right {
+        text-align: right !important;
+        border-left: 1px solid rgba(255, 255, 255, 0.3) !important;
+        padding-left: 15px !important;
+        font-size: 9pt !important;
+        color: var(--white) !important;
+    }
+    
+    .header-right .label {
+        font-size: 8pt !important;
+        color: var(--gold) !important;
+        text-transform: uppercase !important;
+        letter-spacing: 1px !important;
+    }
+    
+    #live-clock {
+        font-size: 14pt !important;
+        font-weight: bold !important;
+        color: var(--white) !important;
+    }
+    
+    #live-date {
+        font-size: 9pt !important;
+        color: var(--white) !important;
+    }
+    
+    /* === BODY CONTENT === */
+    .body-content {
+        padding: 20px 25px !important;
+    }
+    
+    .section {
+        margin-bottom: 15px !important;
+        page-break-inside: avoid !important;
     }
     
     .section-title {
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
+        font-size: 12pt !important;
+        color: var(--navy) !important;
+        border-bottom: 2px solid var(--gold) !important;
+        padding-bottom: 5px !important;
+        margin-bottom: 10px !important;
+        page-break-after: avoid !important;
     }
     
-    @page {
-        margin: 1.5cm;
+    .about-text {
+        font-size: 10pt !important;
+        line-height: 1.6 !important;
     }
     
-    .print-btn {
-        display: none !important;
-    }
-}
-
-/* ============================================
-   RESPONSIVE
-   ============================================ */
-@media (max-width: 768px) {
-    .header {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 10px;
-    }
-
-    .header-left,
-    .header-center,
-    .header-right {
-        text-align: center;
-    }
-
-    .header-right {
-        border-left: none;
-        padding-left: 0;
-        border-top: 1px solid rgba(255, 255, 255, 0.3);
-        padding-top: 10px;
-    }
-
-    .skills-grid,
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
+    /* === TABEL DATA PRIBADI === */
+    .info-table {
+        font-size: 10pt !important;
+        width: 100% !important;
     }
     
-    .education-item {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
+    .info-table td {
+        padding: 4px 8px !important;
+        border-bottom: 1px solid var(--border-color) !important;
+        color: var(--dark-gray) !important;
     }
     
-    .edu-logo-link {
-        align-self: flex-end;
-        width: 40px;
-        height: 40px;
+    .info-table td:first-child {
+        width: 150px !important;
+        font-weight: 600 !important;
+        color: var(--navy) !important;
+    }
+    
+    /* === PENGALAMAN & PENDIDIKAN === */
+    .experience-item {
+        margin-bottom: 12px !important;
+        page-break-inside: avoid !important;
     }
     
     .experience-header {
-        flex-direction: column;
-        gap: 10px;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: flex-start !important;
     }
     
-    .company-logo-link {
-        align-self: flex-end;
-        width: 45px;
-        height: 45px;
+    .experience-item h3 {
+        font-size: 11pt !important;
+        color: var(--navy) !important;
     }
-}
-
-@media (max-width: 480px) {
-    .skills-grid,
+    
+    .experience-item .role {
+        font-size: 10pt !important;
+        color: var(--gold) !important;
+    }
+    
+    .experience-item .definition {
+        background-color: #f8f9fa !important;
+        border-left: 3px solid var(--gold) !important;
+        padding: 6px 10px !important;
+        font-size: 9pt !important;
+        margin: 5px 0 !important;
+    }
+    
+    .experience-item ul {
+        font-size: 9pt !important;
+        padding-left: 18px !important;
+    }
+    
+    .education-item {
+        display: flex !important;
+        justify-content: space-between !important;
+        padding: 6px 0 !important;
+        font-size: 10pt !important;
+        page-break-inside: avoid !important;
+    }
+    
+    /* === SKILLS GRID === */
+    .skills-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 10px !important;
+    }
+    
+    .skill-card {
+        background-color: var(--light-gray) !important;
+        border: 1px solid var(--border-color) !important;
+        padding: 10px !important;
+        page-break-inside: avoid !important;
+    }
+    
+    .skill-card h4 {
+        font-size: 10pt !important;
+        color: var(--navy) !important;
+    }
+    
+    .skill-card p {
+        font-size: 9pt !important;
+    }
+    
+    /* === GALERI: 3 KOLOM === */
     .gallery-grid {
-        grid-template-columns: 1fr;
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 10px !important;
     }
-
-    .body-content {
-        padding: 15px;
+    
+    .gallery-item {
+        page-break-inside: avoid !important;
+        border: 1px solid var(--border-color) !important;
     }
-
-    .header {
-        padding: 15px;
+    
+    .gallery-img {
+        height: 110px !important;
+        overflow: hidden !important;
     }
-
-    .header-center h1 {
-        font-size: 22px;
+    
+    .gallery-img img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
     }
-}
-
-@media print {
+    
+    .gallery-caption {
+        font-size: 8pt !important;
+        padding: 4px !important;
+        background: white !important;
+        color: var(--navy) !important;
+    }
+    
+    /* === FOOTER === */
+    .footer {
+        background-color: var(--navy) !important;
+        color: rgba(255, 255, 255, 0.7) !important;
+        padding: 10px !important;
+        font-size: 9pt !important;
+        text-align: center !important;
+    }
+    
+    /* === HILANGKAN LOGO SEKOLAH & PERUSAHAAN (opsional) === */
     .edu-logo-link,
     .company-logo-link {
-        display: none;
+        display: none !important;
+    }
+    
+    /* === PAGE BREAK OPTIMIZATION === */
+    .section {
+        page-break-inside: avoid;
+    }
+    
+    h1, h2, h3, h4 {
+        page-break-after: avoid;
+    }
+    
+    ul, ol {
+        page-break-inside: avoid;
+    }
+    
+    /* === HILANGKAN LINK UNDERLINE DI PDF === */
+    a {
+        text-decoration: none !important;
+        color: inherit !important;
     }
 }
 
