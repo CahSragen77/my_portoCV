@@ -659,10 +659,26 @@ body {
    PRINT STYLES
    ============================================ */
 @media print {
-    .web-placeholder {
+    /* 1. Atur Ukuran Kertas & Margin */
+    @page {
+        size: A4 portrait;
+        margin: 1.5cm;
+    }
+
+    /* 2. Pengaturan Warna & Elemen Tersembunyi */
+    body {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    .web-placeholder,
+    .privacy-notice,
+    .web-only,
+    .print-btn,
+    .wa-floating {
         display: none !important;
     }
-    
+
     .print-data {
         display: inline !important;
         color: var(--dark-gray) !important;
@@ -672,29 +688,32 @@ body {
         padding: 0 !important;
         border: none !important;
     }
-    
-    .privacy-notice,
-    .web-only {
-        display: none !important;
-    }
-    
-    .header {
-        background-color: var(--navy) !important;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-    }
-    
+
+    .header,
     .section-title {
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
     }
+
+    /* ============================================
+       3. ATURAN PENCEGAHAN ELEMEN TERPOTONG (SOLUSI)
+       ============================================ */
     
-    @page {
-        margin: 1.5cm;
+    /* Mencegah section / blok data terpotong di tengah jalan */
+    section, 
+    .section-block,
+    .data-pribadi,
+    .pengalaman-kerja,
+    .pendidikan,
+    .footer-credit-section {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
     }
-    
-    .print-btn {
-        display: none !important;
+
+    /* Mencegah Judul Section terpisah dari isinya di bagian bawah halaman */
+    h1, h2, h3, .section-title {
+        page-break-after: avoid !important;
+        break-after: avoid !important;
     }
 }
 
