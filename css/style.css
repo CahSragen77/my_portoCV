@@ -799,6 +799,7 @@ body {
 /* ===== FOOTER PREMIUM ===== */
 .footer-credit-section {
   padding: 1.5rem 0 0.5rem 0;
+  text-align: center;
 }
 
 .credit-divider {
