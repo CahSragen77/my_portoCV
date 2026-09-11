@@ -779,6 +779,7 @@ body {
 /* ===== FOOTER PREMIUM ===== */
 .footer-credit-section {
   padding: 1.5rem 0 0.5rem 0;
+  text-align: center;
 }
 
 .credit-divider {
@@ -871,7 +872,7 @@ body {
 /* ===== FLOATING WHATSAPP ===== */
 .wa-floating {
   position: fixed;
-  bottom: 24px;
+  bottom: 90px;
   right: 24px;
   width: 56px;
   height: 56px;
