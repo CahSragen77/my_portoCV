@@ -53,10 +53,10 @@ body {
 }
 
 .photo-placeholder {
-    width: 4cm;
-    height: 5cm;
+    width: 130px;
+    height: 130px;
     background-color: var(--gold);
-    border-radius: 8px;
+    border-radius: 50%;
     border: 4px solid var(--white);
     display: flex;
     align-items: center;
@@ -65,14 +65,13 @@ body {
     font-weight: bold;
     color: var(--navy);
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .photo-placeholder img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 0;
+    border-radius: 50%;
 }
 
 .header-center {
@@ -659,26 +658,10 @@ body {
    PRINT STYLES
    ============================================ */
 @media print {
-    /* 1. Atur Ukuran Kertas & Margin */
-    @page {
-        size: A4 portrait;
-        margin: 1.5cm;
-    }
-
-    /* 2. Pengaturan Warna & Elemen Tersembunyi */
-    body {
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
-    }
-
-    .web-placeholder,
-    .privacy-notice,
-    .web-only,
-    .print-btn,
-    .wa-floating {
+    .web-placeholder {
         display: none !important;
     }
-
+    
     .print-data {
         display: inline !important;
         color: var(--dark-gray) !important;
@@ -688,32 +671,29 @@ body {
         padding: 0 !important;
         border: none !important;
     }
-
-    .header,
-    .section-title {
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
-    }
-
-    /* ============================================
-       3. ATURAN PENCEGAHAN ELEMEN TERPOTONG (SOLUSI)
-       ============================================ */
     
-    /* Mencegah section / blok data terpotong di tengah jalan */
-    section, 
-    .section-block,
-    .data-pribadi,
-    .pengalaman-kerja,
-    .pendidikan,
-    .footer-credit-section {
-        page-break-inside: avoid !important;
-        break-inside: avoid !important;
+    .privacy-notice,
+    .web-only {
+        display: none !important;
     }
-
-    /* Mencegah Judul Section terpisah dari isinya di bagian bawah halaman */
-    h1, h2, h3, .section-title {
-        page-break-after: avoid !important;
-        break-after: avoid !important;
+    
+    .header {
+        background-color: var(--navy) !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    .section-title {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    @page {
+        margin: 1.5cm;
+    }
+    
+    .print-btn {
+        display: none !important;
     }
 }
 
@@ -793,91 +773,4 @@ body {
     .company-logo-link {
         display: none;
     }
-}
-
-
-/* ===== FOOTER PREMIUM ===== */
-.footer-credit-section {
-  padding: 1.5rem 0 0.5rem 0;
-  text-align: center;
-}
-
-.credit-divider {
-  border: none;
-  height: 2px;
-  background: linear-gradient(to right, transparent, #d6c8bc, transparent);
-  margin-bottom: 1.2rem;
-  opacity: 0.6;
-}
-.dark-mode .credit-divider {
-  background: linear-gradient(to right, transparent, #3f554a, transparent);
-}
-
-.credit-text {
-  font-size: 0.75rem;
-  color: #a28d7a;
-  line-height: 1.8;
-}
-.dark-mode .credit-text {
-  color: #7e9a88;
-}
-
-.credit-text strong {
-  color: #3d2c1e;
-  font-weight: 600;
-}
-.dark-mode .credit-text strong {
-  color: #d0e0d0;
-}
-
-.social-link {
-  color: #8b7a6a;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  font-weight: 500;
-  padding: 0 2px;
-}
-.social-link:hover {
-  color: #3d2c1e;
-  text-decoration: underline;
-}
-.dark-mode .social-link {
-  color: #a0b8a8;
-}
-.dark-mode .social-link:hover {
-  color: #e0ece0;
-}
-
-
-/* ===== FLOATING WHATSAPP ===== */
-.wa-floating {
-  position: fixed;
-  bottom: 80px;
-  right: 24px;
-  width: 56px;
-  height: 56px;
-  background: #25D366;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-  transition: all 0.3s ease;
-  z-index: 999;
-  animation: waPulse 2.5s ease-in-out infinite;
-  text-decoration: none;
-}
-.wa-floating:hover {
-  transform: scale(1.1) translateY(-3px);
-  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
-}
-.wa-floating svg {
-  width: 30px;
-  height: 30px;
-  fill: white;
-}
-@keyframes waPulse {
-  0% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
-  50% { box-shadow: 0 4px 40px rgba(37, 211, 102, 0.7), 0 0 60px rgba(37, 211, 102, 0.2); }
-  100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
 }
