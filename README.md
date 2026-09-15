@@ -1,3 +1,4 @@
+<img width="48" height="62" alt="logo cs77" src="https://github.com/user-attachments/assets/d15a32b4-d527-4406-b8c5-074aae28b675" />
 
 <img width="1073" height="1417" alt="Profile Photo" src="https://github.com/user-attachments/assets/8202f13c-ff02-43de-b10c-5028eddec8f4" />
 <img width="200" height="200" alt="pt_sanjayatama_lestari_logo" src="https://github.com/user-attachments/assets/5584b48f-7fbb-4888-b23d-2c632facc24d" />
