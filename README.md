@@ -1,3 +1,4 @@
+<img width="1073" height="1417" alt="Profile Photo" src="https://github.com/user-attachments/assets/8202f13c-ff02-43de-b10c-5028eddec8f4" />
 <img width="200" height="200" alt="pt_sanjayatama_lestari_logo" src="https://github.com/user-attachments/assets/5584b48f-7fbb-4888-b23d-2c632facc24d" />
 <img width="250" height="89" alt="Tops_(logo) svg" src="https://github.com/user-attachments/assets/adc1d004-948b-49c8-b10c-18915c71d543" />
 <img width="600" height="120" alt="logo-Hero" src="https://github.com/user-attachments/assets/60f2dbd7-b037-483e-830d-0fb63f3a6341" />
